@@ -15,7 +15,7 @@ permalink: /contact/
             <!-- Left: Form -->
             <div class="bg-white rounded-3xl shadow-card p-8 md:p-12 border border-gray-100">
                 <h3 class="text-3xl font-heading text-forest mb-8">Send us a message</h3>
-                <form action="https://formsubmit.co/ajax/darjeelingecotour@gmail.com" method="POST" class="space-y-6 inquiry-form" data-whatsapp="{{ site.whatsapp }}" data-home="{{ '/' | url }}">
+                <form action="https://formsubmit.co/ajax/darjeelingecotour@gmail.com" method="POST" class="space-y-6 inquiry-form" data-whatsapp="{{ site.whatsapp }}" data-home="/darjeelingeco/">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="form-label block text-sm font-bold text-gray-700 mb-2">Your Name *</label>
@@ -57,27 +57,27 @@ permalink: /contact/
             <!-- Right: Info -->
             <div class="space-y-8 flex flex-col">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4">
-                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl">📞</div>
+                    <a href="tel:{{ site.phone }}" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group">
+                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl group-hover:scale-110 transition-transform">📞</div>
                         <div>
                             <h4 class="font-bold text-forest text-lg mb-1">Phone</h4>
-                            <a href="tel:{{ site.phone }}" class="text-gray-600 hover:text-primary transition font-medium">{{ site.phone or '+91 98765 43210' }}</a>
+                            <span class="text-gray-600 group-hover:text-primary transition font-medium">{{ site.phone or '+91 98765 43210' }}</span>
                         </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4">
-                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl">✉️</div>
+                    </a>
+                    <a href="mailto:{{ site.email }}" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group">
+                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl group-hover:scale-110 transition-transform">✉️</div>
                         <div>
                             <h4 class="font-bold text-forest text-lg mb-1">Email</h4>
-                            <a href="mailto:{{ site.email }}" class="text-gray-600 hover:text-primary transition font-medium break-all">{{ site.email or 'hello@sarkartravels.com' }}</a>
+                            <span class="text-gray-600 group-hover:text-primary transition font-medium break-all">{{ site.email or 'hello@sarkartravels.com' }}</span>
                         </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4">
-                        <div class="bg-green-100 p-4 rounded-full text-green-600 text-2xl">💬</div>
+                    </a>
+                    <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group cursor-pointer block">
+                        <div class="bg-green-100 p-4 rounded-full text-green-600 text-2xl group-hover:scale-110 transition-transform">💬</div>
                         <div>
                             <h4 class="font-bold text-forest text-lg mb-1">WhatsApp</h4>
-                            <a href="https://wa.me/{{ site.whatsapp }}" class="text-gray-600 hover:text-green-600 transition font-medium">Message us</a>
+                            <span class="text-gray-600 group-hover:text-green-600 transition font-medium">Message us</span>
                         </div>
-                    </div>
+                    </a>
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4">
                         <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl">📍</div>
                         <div>
