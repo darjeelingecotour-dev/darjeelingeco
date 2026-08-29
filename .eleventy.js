@@ -1,6 +1,10 @@
 import yaml from "js-yaml";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+  // --- Plugins ---
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // --- YAML Data Support ---
   eleventyConfig.addDataExtension("yaml,yml", (contents) =>
     yaml.load(contents)
@@ -73,6 +77,7 @@ export default function (eleventyConfig) {
 
   // --- Directory Configuration ---
   return {
+    pathPrefix: "/darjeelingeco/",
     dir: {
       input: "src",
       includes: "_includes",
