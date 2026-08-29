@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }).addTo(map);
             
             L.marker([lat, lng]).addTo(map)
-                .bindPopup('<b>SarkarTravels</b><br>Kolkata Office.')
+                .bindPopup('<b>Darjeeling tour & travels</b><br>Kolkata Office.')
                 .openPopup();
                 
             // Fix map rendering issues when unhidden/resized
