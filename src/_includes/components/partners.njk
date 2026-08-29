@@ -5,10 +5,11 @@
         
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
             {% for partner in partners %}
-            <div class="group cursor-pointer">
-                <img src="{{ partner.icon }}" alt="{{ partner.name }}" class="h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" title="{{ partner.description }}">
+            <div class="group cursor-pointer flex flex-col items-center gap-2" title="{{ partner.description }}">
+                <div class="text-5xl grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">{{ partner.icon }}</div>
+                <div class="text-sm font-medium text-forest/70 group-hover:text-forest transition-colors">{{ partner.name }}</div>
             </div>
             {% endfor %}
         </div>
     </div>
-</section
+</section>
