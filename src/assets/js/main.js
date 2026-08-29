@@ -354,4 +354,82 @@ document.addEventListener('DOMContentLoaded', () => {
             window.addEventListener('load', initMap);
         }
     }
+    // 11. Form Handling (Email + WhatsApp)
+    const inquiryForms = document.querySelectorAll('.inquiry-form');
+    if (inquiryForms.length > 0) {
+        inquiryForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                fetch(form.action, {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(response => {
+                    let waText = "New Inquiry:\\n\\n";
+                    for (const [key, value] of Object.entries(data)) {
+                        if(key !== '_captcha' && key !== '_next' && value) {
+                            waText += `*${key.charAt(0).toUpperCase() + key.slice(1)}*: ${value}\\n`;
+                        }
+                    }
+                    
+                    const waNumber = form.getAttribute('data-whatsapp') || '918240158027';
+                    const waUrl = `https://wa.me/${waNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(waText)}`;
+                    
+                    window.open(waUrl, '_blank');
+                    
+                    form.innerHTML = `<div class="p-8 bg-green-50 text-forest rounded-2xl border border-green-200 text-center shadow-inner">
+                        <div class="text-4xl mb-4">✅</div>
+                        <h4 class="font-bold text-2xl mb-2 font-heading">Thank You!</h4>
+                        <p class="text-lg">Your inquiry has been sent to our email and we're opening WhatsApp to chat with you directly.</p>
+                    </div>`;
+                }).catch(error => {
+                    submitBtn.textContent = 'Error. Try Again.';
+                    submitBtn.disabled = false;
+                    console.error('Error submitting form:', error);
+                });
+            });
+        });
+    }
+
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    if (newsletterForms.length > 0) {
+        newsletterForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.textContent = 'Subscribing...';
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                fetch(form.action, {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(response => {
+                    form.innerHTML = `<div class="p-4 bg-white/20 text-white rounded-full border border-white/30 text-center font-bold">✅ Successfully subscribed!</div>`;
+                }).catch(error => {
+                    submitBtn.textContent = 'Error';
+                    submitBtn.disabled = false;
+                });
+            });
+        });
+    }
 });
