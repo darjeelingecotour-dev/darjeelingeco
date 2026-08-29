@@ -1,11 +1,8 @@
 <nav id="navbar" class="glass-nav fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="/" class="flex items-center gap-2 text-forest">
-            <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 19h20L12 2zm0 4.5l5.5 9.5h-11L12 6.5z"/>
-                <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-            </svg>
-            <span class="font-brand text-2xl font-bold tracking-tight">SarkarTravels</span>
+        <a href="{{ '/' | url }}" class="flex items-center gap-2 text-forest">
+            <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ site.name }} Logo" class="h-12 w-auto object-contain">
+            <span class="font-brand text-2xl font-bold tracking-tight">{{ site.name }}</span>
         </a>
         
         <div class="hidden md:flex items-center gap-6">

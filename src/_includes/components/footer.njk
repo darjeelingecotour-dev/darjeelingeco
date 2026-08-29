@@ -3,11 +3,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
             <div>
                 <div class="flex items-center gap-2 text-white mb-6">
-                    <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 19h20L12 2zm0 4.5l5.5 9.5h-11L12 6.5z"/>
-                        <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
-                    <span class="font-brand text-3xl font-bold tracking-tight">SarkarTravels</span>
+                    <img src="{{ '/assets/images/logo.png' | url }}" alt="{{ site.name }} Logo" class="h-12 w-auto object-contain">
+                    <span class="font-brand text-3xl font-bold tracking-tight">{{ site.name }}</span>
                 </div>
                 <p class="text-gray-400 mb-8 text-base leading-relaxed">{{ site.tagline or 'Curated Northeast India Journeys with an eco-conscious approach.' }}</p>
                 <div class="flex gap-4">
@@ -64,7 +61,7 @@
         </div>
         
         <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-            <p>&copy; 2026 SarkarTravels. All rights reserved.</p>
+            <p>&copy; 2026 {{ site.name }}. All rights reserved.</p>
             <div class="flex gap-6 mt-4 md:mt-0">
                 <a href="/privacy" class="hover:text-white transition">Privacy Policy</a>
                 <a href="/terms" class="hover:text-white transition">Terms of Service</a>
