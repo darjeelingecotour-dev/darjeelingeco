@@ -1,0 +1,14 @@
+<section class="py-16 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <span class="section-badge text-gray-400 font-medium tracking-wide uppercase text-sm mb-2 block">Our Network</span>
+        <h2 class="section-title text-2xl font-heading text-forest mb-10">Our Partners & Certifications</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+            {% for partner in partners %}
+            <div class="group cursor-pointer">
+                <img src="{{ partner.icon }}" alt="{{ partner.name }}" class="h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" title="{{ partner.description }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section

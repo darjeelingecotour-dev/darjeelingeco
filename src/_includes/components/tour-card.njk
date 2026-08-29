@@ -1,0 +1,33 @@
+<div class="tour-card bg-white rounded-xl shadow-card overflow-hidden hover:shadow-card-hover transition-all duration-300 group flex flex-col h-full border border-gray-100" 
+     data-title="{{ tour.title }}" data-region="{{ tour.region }}" data-tags="{{ tour.tags | join(',') }}">
+    <div class="relative h-60 overflow-hidden">
+        <img src="{{ tour.image }}" alt="{{ tour.title }}" class="tour-card-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy">
+        <div class="tour-card-badge absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-forest shadow">
+            {{ tour.duration }}
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium text-sm">{{ tour.region }} Region</span>
+        </div>
+    </div>
+    <div class="p-6 flex-grow flex flex-col">
+        <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary">{{ tour.region }}</span>
+            <div class="tour-card-rating text-sm font-bold flex items-center gap-1 text-gray-700 bg-yellow-50 px-2 py-0.5 rounded">
+                <span class="text-yellow-500">⭐</span> {{ tour.rating }}
+            </div>
+        </div>
+        <h3 class="text-xl font-heading font-bold mb-3 text-forest leading-tight group-hover:text-primary transition-colors">{{ tour.title }}</h3>
+        <p class="text-gray-600 text-sm mb-5 line-clamp-2">{{ tour.shortDescription }}</p>
+        
+        <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+            {% for tag in tour.tags | slice(0,3) %}
+                <span class="tag-pill bg-sage text-forest font-medium text-xs px-2.5 py-1 rounded-full">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        
+        <div class="border-t border-gray-100 pt-5 flex justify-between items-center mt-auto">
+            <div class="font-bold text-xl text-forest">₹{{ tour.price }}</div>
+            <a href="/tours/{{ tour.slug }}/" class="text-primary font-bold hover:text-forest transition flex items-center gap-1 group-hover:translate-x-1 duration-300">View Details <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</div>

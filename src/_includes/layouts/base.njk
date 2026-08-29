@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or site.name }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or site.name }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:wght@400;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+    <!-- Fuse.js -->
+    <script src="https://unpkg.com/fuse.js@6.6.2/dist/fuse.min.js" defer></script>
+</head>
+<body class="font-body text-gray-800 antialiased flex flex-col min-h-screen">
+    {% include "components/navbar.njk" %}
+    
+    <main class="flex-grow">
+        {{ content | safe }}
+    </main>
+    
+    {% include "components/footer.njk" %}
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+    
+    <!-- Main JS -->
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

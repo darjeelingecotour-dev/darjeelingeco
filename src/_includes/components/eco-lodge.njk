@@ -1,0 +1,35 @@
+<section class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-4 mb-12">
+        <div class="flex justify-between items-end">
+            <div>
+                <span class="section-badge text-primary font-medium tracking-wide uppercase text-sm mb-3 block">Accommodation</span>
+                <h2 class="section-title text-3xl md:text-5xl font-heading text-forest">Stay at Eco-Lodges</h2>
+            </div>
+            <div class="hidden md:flex text-gray-500 text-sm items-center gap-2 bg-gray-50 px-4 py-2 rounded-full border border-gray-200">
+                <span>Drag to scroll</span> <span aria-hidden="true">→</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="eco-scroll flex overflow-x-auto pb-12 px-4 gap-8 cursor-grab active:cursor-grabbing snap-x snap-mandatory hide-scrollbar" style="scroll-padding-left: 1rem;">
+        {% for lodge in ecolodges %}
+        <div class="eco-card flex-none w-[85vw] md:w-96 bg-sage/30 rounded-2xl overflow-hidden shadow-sm snap-start border border-green-50 hover:shadow-md transition-shadow">
+            <div class="relative h-56 overflow-hidden">
+                <img src="{{ lodge.image }}" alt="{{ lodge.name }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-forest shadow-sm uppercase tracking-wide">
+                    {{ lodge.location }}
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-heading font-bold text-forest mb-3">{{ lodge.name }}</h3>
+                <p class="text-gray-600 text-sm mb-5 leading-relaxed">{{ lodge.description }}</p>
+                <div class="flex flex-wrap gap-2">
+                    {% for feature in lodge.features %}
+                        <span class="bg-white px-2.5 py-1 rounded text-xs font-medium text-forest border border-green-100 shadow-sm">{{ feature }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section

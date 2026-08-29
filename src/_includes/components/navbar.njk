@@ -1,0 +1,33 @@
+<nav id="navbar" class="glass-nav fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-2 text-forest">
+            <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 19h20L12 2zm0 4.5l5.5 9.5h-11L12 6.5z"/>
+                <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span class="font-brand text-2xl font-bold tracking-tight">SarkarTravels</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-6">
+            {% for item in site.nav %}
+                <a href="{{ item.url }}" class="hover:text-primary transition font-medium text-gray-700">{{ item.label }}</a>
+            {% endfor %}
+            <a href="/contact/" class="btn-primary bg-primary text-white px-5 py-2 rounded-full hover:bg-forest transition shadow-md">Book Now</a>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="md:hidden text-forest p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 py-4 px-4 shadow-lg absolute w-full">
+        <div class="flex flex-col gap-4">
+            {% for item in site.nav %}
+                <a href="{{ item.url }}" class="block font-medium py-2 text-gray-700 hover:text-primary">{{ item.label }}</a>
+            {% endfor %}
+            <a href="/contact/" class="btn-primary inline-block text-center bg-primary text-white px-5 py-3 rounded hover:bg-forest transition shadow-md font-bold">Book Now</a>
+        </div>
+    </div>
+</nav>

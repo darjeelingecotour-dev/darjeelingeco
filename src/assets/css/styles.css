@@ -1,0 +1,338 @@
+/* ============================================
+   SarkarTravels — Main Stylesheet
+   Tailwind CSS + Custom Components
+   ============================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base Layer Overrides --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-forest-800 bg-sage;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    @apply bg-primary-300 text-forest;
+  }
+}
+
+/* --- Component Layer --- */
+@layer components {
+
+  /* === Buttons === */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5
+           bg-primary text-white font-semibold rounded-xl
+           shadow-md hover:bg-primary-700 hover:shadow-lg
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out
+           focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5
+           bg-transparent text-white font-semibold rounded-xl
+           border-2 border-white/80
+           hover:bg-white hover:text-forest
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out
+           focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-forest text-white font-semibold rounded-xl
+           hover:bg-forest-700 shadow-md hover:shadow-lg
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5
+           text-primary font-semibold rounded-lg
+           hover:bg-primary-50
+           transition-all duration-200;
+  }
+
+  /* === Glassmorphism Navbar === */
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-lg border-b border-white/20
+           shadow-sm transition-all duration-300;
+  }
+
+  .glass-nav.scrolled {
+    @apply bg-white/95 shadow-md;
+  }
+
+  /* === Cards === */
+  .tour-card {
+    @apply relative bg-white rounded-2xl overflow-hidden
+           shadow-card hover:shadow-card-hover
+           transform hover:-translate-y-2
+           transition-all duration-400 ease-out
+           cursor-pointer;
+  }
+
+  .tour-card-image {
+    @apply w-full h-56 object-cover
+           transition-transform duration-700 ease-out;
+  }
+
+  .tour-card:hover .tour-card-image {
+    @apply scale-105;
+  }
+
+  .tour-card-badge {
+    @apply absolute top-4 left-4
+           bg-white/90 backdrop-blur-sm
+           text-forest text-xs font-bold uppercase tracking-wider
+           px-3 py-1.5 rounded-full
+           shadow-sm;
+  }
+
+  .tour-card-rating {
+    @apply absolute top-4 right-4
+           bg-primary/90 backdrop-blur-sm
+           text-white text-xs font-bold
+           px-2.5 py-1 rounded-full
+           flex items-center gap-1;
+  }
+
+  /* === Eco-Lodge Horizontal Scroll === */
+  .eco-scroll {
+    @apply flex gap-6 overflow-x-auto pb-4
+           snap-x snap-mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .eco-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .eco-card {
+    @apply flex-shrink-0 w-80 rounded-2xl overflow-hidden
+           bg-white shadow-card hover:shadow-card-hover
+           transition-all duration-300
+           snap-center;
+  }
+
+  /* === Timeline (How It Works) === */
+  .timeline-step {
+    @apply relative pl-12 pb-12 last:pb-0;
+  }
+
+  .timeline-step::before {
+    content: '';
+    @apply absolute left-5 top-10 w-0.5 h-full bg-primary-200;
+  }
+
+  .timeline-step:last-child::before {
+    display: none;
+  }
+
+  .timeline-icon {
+    @apply absolute left-0 top-0 w-10 h-10
+           bg-primary text-white
+           rounded-full flex items-center justify-center
+           text-lg font-bold shadow-glow
+           z-10;
+  }
+
+  /* === Section Headers === */
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold text-forest;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-forest-400 mt-3 max-w-2xl;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center gap-2
+           text-primary text-sm font-bold uppercase tracking-widest
+           mb-4;
+  }
+
+  /* === Testimonial Carousel === */
+  .carousel-container {
+    @apply relative overflow-hidden;
+  }
+
+  .carousel-track {
+    @apply flex transition-transform duration-500 ease-out;
+  }
+
+  .carousel-slide {
+    @apply flex-shrink-0 w-full px-4;
+  }
+
+  .carousel-dot {
+    @apply w-2.5 h-2.5 rounded-full bg-primary-200
+           transition-all duration-300 cursor-pointer;
+  }
+
+  .carousel-dot.active {
+    @apply bg-primary w-8;
+  }
+
+  /* === Carbon Calculator === */
+  .calc-gauge {
+    @apply relative w-48 h-48 mx-auto;
+  }
+
+  .calc-gauge-ring {
+    @apply absolute inset-0 rounded-full;
+    background: conic-gradient(
+      #16A34A var(--gauge-percent, 0%),
+      #E2E8F0 var(--gauge-percent, 0%)
+    );
+    mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 12px), #000 calc(100% - 11px));
+  }
+
+  /* === Tag Pills === */
+  .tag-pill {
+    @apply inline-flex items-center px-3 py-1
+           bg-primary-50 text-primary-700
+           text-xs font-medium rounded-full
+           border border-primary-100;
+  }
+
+  /* === Inquiry Form === */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl
+           bg-white border border-gray-200
+           text-forest placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary
+           transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-forest-700 mb-2;
+  }
+
+  /* === Trust Bar === */
+  .trust-badge {
+    @apply flex items-center gap-3 px-5 py-3
+           bg-white/60 backdrop-blur-sm
+           rounded-xl border border-white/30
+           text-sm text-white/90;
+  }
+}
+
+/* --- Utility Layer --- */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays for children */
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-primary-300 to-accent;
+  }
+
+  /* Line clamp */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* --- Non-Tailwind Custom Styles --- */
+
+/* Parallax hero */
+.hero-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* Counter animation */
+.counter-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Map container */
+.leaflet-container {
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+/* Newsletter pattern background */
+.newsletter-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316A34A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Print styles for itineraries */
+@media print {
+  .glass-nav,
+  .footer-section,
+  .newsletter-section,
+  .btn-primary,
+  .btn-outline {
+    display: none !important;
+  }
+
+  .tour-detail {
+    break-inside: avoid;
+  }
+}

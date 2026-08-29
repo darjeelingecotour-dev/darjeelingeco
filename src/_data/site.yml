@@ -1,0 +1,30 @@
+name: SarkarTravels
+tagline: "Travel the Northeast. Honor the Land."
+description: "Curated Darjeeling, Sikkim, Assam and Himalayan journeys that support local communities and conservation."
+url: "https://sarkartravels.github.io"
+email: "hello@sarkartravels.com"
+phone: "+91 98300 12345"
+whatsapp: "+919830012345"
+address: "42 Park Street, Kolkata 700016, West Bengal, India"
+
+social:
+  instagram: "https://instagram.com/sarkartravels"
+  facebook: "https://facebook.com/sarkartravels"
+  youtube: "https://youtube.com/@sarkartravels"
+  whatsapp: "https://wa.me/919830012345"
+
+stats:
+  treesPlanted: 12500
+  co2Offset: 48
+  conservationPartners: 15
+  happyTravelers: 3200
+
+nav:
+  - title: Home
+    url: /
+  - title: Tours
+    url: /tours/
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/

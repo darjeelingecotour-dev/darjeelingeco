@@ -1,0 +1,131 @@
+- title: "Darjeeling Classic"
+  slug: "darjeeling-classic"
+  duration: "4N/5D"
+  price: 18500
+  region: "Darjeeling"
+  tags: ["Mountains", "Tea Gardens", "Heritage", "Photography"]
+  highlight: "Stay amidst world-famous tea estates and experience the heritage Toy Train."
+  rating: 4.8
+  image: "/assets/images/darjeeling-tea.png"
+  shortDescription: "Experience the Queen of the Hills in its full glory. Wander through lush green tea gardens, catch the breathtaking sunrise at Tiger Hill, and enjoy a nostalgic ride on the Darjeeling Himalayan Railway."
+
+- title: "Pelling Retreat"
+  slug: "pelling-retreat"
+  duration: "3N/4D"
+  price: 15500
+  region: "Sikkim"
+  tags: ["Mountains", "Monastery", "Culture", "Photography"]
+  highlight: "Uninterrupted, majestic views of Mount Kanchenjunga from your window."
+  rating: 4.7
+  image: "/assets/images/pelling-panorama.png"
+  shortDescription: "Find peace in the quiet town of Pelling. Explore ancient monasteries, walk to hidden waterfalls, and soak in the spiritual calmness of the Himalayas."
+
+- title: "Sikkim Grand Circuit"
+  slug: "sikkim-grand-circuit"
+  duration: "6N/7D"
+  price: 32000
+  region: "Sikkim"
+  tags: ["Mountains", "Adventure", "Monastery", "Culture"]
+  highlight: "A comprehensive journey covering the best of East and West Sikkim."
+  rating: 4.9
+  image: "/assets/images/pelling-panorama.png"
+  shortDescription: "The ultimate Sikkim experience. From the bustling streets of Gangtok to the serene valleys of West Sikkim, dive deep into the local culture, cuisine, and landscapes."
+
+- title: "North Sikkim Expedition"
+  slug: "north-sikkim-expedition"
+  duration: "7N/8D"
+  price: 38000
+  region: "North Sikkim"
+  tags: ["Mountains", "Adventure", "Photography"]
+  highlight: "Explore the high-altitude wonders of Gurudongmar Lake and Yumthang Valley."
+  rating: 4.9
+  image: "/assets/images/north-sikkim.png"
+  shortDescription: "A thrilling adventure to the rugged and raw landscapes of North Sikkim. Witness frozen lakes, hot springs, and sweeping valleys of flowers in this unforgettable journey."
+
+- title: "Zuluk Silk Route"
+  slug: "zuluk-silk-route"
+  duration: "5N/6D"
+  price: 24000
+  region: "East Sikkim"
+  tags: ["Mountains", "Heritage", "Adventure", "Photography"]
+  highlight: "Drive through the historic 32 hairpin bends of the ancient Silk Route."
+  rating: 4.8
+  image: "/assets/images/zuluk-road.png"
+  shortDescription: "Trace the footsteps of ancient traders on the historic Silk Route. Experience homestays, untouched villages, and panoramic views of the eastern Himalayas."
+
+- title: "Darjeeling + Pelling Combo"
+  slug: "darjeeling-pelling-combo"
+  duration: "6N/7D"
+  price: 28500
+  region: "Darjeeling+Sikkim"
+  tags: ["Mountains", "Tea Gardens", "Culture", "Monastery"]
+  highlight: "The perfect blend of colonial charm and Himalayan spirituality."
+  rating: 4.8
+  image: "/assets/images/hero-darjeeling.png"
+  shortDescription: "Can't decide between Bengal and Sikkim? Do both. Sip premium tea in Darjeeling before crossing over to the serene, monastery-dotted landscapes of Pelling."
+
+- title: "Kaziranga Wildlife Safari"
+  slug: "kaziranga-wildlife-safari"
+  duration: "3N/4D"
+  price: 19500
+  region: "Assam"
+  tags: ["Wildlife", "Adventure", "Photography"]
+  highlight: "Spot the rare one-horned rhinoceros in its natural habitat."
+  rating: 4.7
+  image: "/assets/images/kaziranga-rhino.png"
+  shortDescription: "An exciting wildlife safari in the heart of Assam. Explore dense grasslands and marshy swamps to witness rich biodiversity, including elephants, tigers, and wild water buffalo."
+
+- title: "Assam Tea Circuit"
+  slug: "assam-tea-circuit"
+  duration: "4N/5D"
+  price: 22000
+  region: "Assam"
+  tags: ["Tea Gardens", "Heritage", "Culture"]
+  highlight: "Stay in colonial-era tea bungalows and learn the art of tea tasting."
+  rating: 4.6
+  image: "/assets/images/assam-tea.png"
+  shortDescription: "Immerse yourself in the world's largest tea-growing region. Tour sprawling estates, interact with local tea pluckers, and enjoy the rich heritage of Assamese hospitality."
+
+- title: "Purulia + Jhargram Tribal"
+  slug: "purulia-jhargram-tribal"
+  duration: "3N/4D"
+  price: 12500
+  region: "Bengal"
+  tags: ["Culture", "Heritage", "Photography"]
+  highlight: "Experience the vibrant Chhau dance and authentic Santhal tribal life."
+  rating: 4.5
+  image: "/assets/images/purulia-tribal.png"
+  shortDescription: "Discover the rustic charm of rural Bengal. Wander through red soil paths, dense sal forests, and experience the rhythmic beats and colorful masks of local tribal culture."
+
+- title: "Darjeeling Himalayan Trek"
+  slug: "darjeeling-himalayan-trek"
+  duration: "5N/6D"
+  price: 21000
+  region: "Darjeeling"
+  tags: ["Trekking", "Mountains", "Adventure"]
+  highlight: "Trek the famous Sandakphu route for views of four of the world's highest peaks."
+  rating: 4.9
+  image: "/assets/images/mountain-trek.png"
+  shortDescription: "Lace up your hiking boots for this spectacular trek. Walk through rhododendron forests and along the Nepal border to witness a breathtaking panorama of Everest and Kanchenjunga."
+
+- title: "Sikkim Wellness Retreat"
+  slug: "sikkim-wellness-retreat"
+  duration: "4N/5D"
+  price: 26500
+  region: "Sikkim"
+  tags: ["Wellness", "Mountains", "Culture"]
+  highlight: "Rejuvenate with traditional Tibetan healing therapies and meditation."
+  rating: 4.8
+  image: "/assets/images/sikkim-wellness.png"
+  shortDescription: "A journey inwards. Disconnect from the chaos and center yourself with yoga, organic meals, and peaceful meditation sessions led by local monks."
+
+- title: "Eastern Himalaya Birding"
+  slug: "eastern-himalaya-birding"
+  duration: "8N/9D"
+  price: 45000
+  region: "Multi-region"
+  tags: ["Birding", "Wildlife", "Photography", "Mountains"]
+  highlight: "Guided by expert ornithologists to spot rare Himalayan avian species."
+  rating: 4.9
+  image: "/assets/images/himalaya-birding.png"
+  shortDescription: "A paradise for birdwatchers. Travel across varying altitudes from the foothills of Assam to the alpine forests of Sikkim, observing some of the most exotic bird species in Asia."
