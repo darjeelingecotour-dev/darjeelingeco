@@ -377,10 +377,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify(data)
                 }).then(response => {
-                    let waText = "New Inquiry:\\n\\n";
+                    let waText = "New Inquiry:\n\n";
                     for (const [key, value] of Object.entries(data)) {
                         if(key !== '_captcha' && key !== '_next' && value) {
-                            waText += `*${key.charAt(0).toUpperCase() + key.slice(1)}*: ${value}\\n`;
+                            waText += `*${key.charAt(0).toUpperCase() + key.slice(1)}*: ${value}\n`;
                         }
                     }
                     
