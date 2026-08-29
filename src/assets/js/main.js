@@ -391,9 +391,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     form.innerHTML = `<div class="p-8 bg-green-50 text-forest rounded-2xl border border-green-200 text-center shadow-inner">
                         <div class="text-4xl mb-4">✅</div>
-                        <h4 class="font-bold text-2xl mb-2 font-heading">Thank You!</h4>
-                        <p class="text-lg">Your inquiry has been sent to our email and we're opening WhatsApp to chat with you directly.</p>
+                        <h4 class="font-bold text-xl mb-2 font-heading">Your enuiry has been submitted to " Darjeeling tour &Travels" Happy journey !!!</h4>
                     </div>`;
+                    
+                    setTimeout(() => {
+                        window.location.href = form.getAttribute('data-home') || '/';
+                    }, 3000);
                 }).catch(error => {
                     submitBtn.textContent = 'Error. Try Again.';
                     submitBtn.disabled = false;
