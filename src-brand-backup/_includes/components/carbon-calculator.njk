@@ -1,0 +1,58 @@
+<section class="py-24 bg-sage/50 border-y border-green-50">
+    <div class="container mx-auto px-4 text-center max-w-4xl">
+        <span class="section-badge text-primary font-medium tracking-wide uppercase text-sm mb-3 block">Responsibility</span>
+        <h2 class="section-title text-3xl md:text-5xl font-heading text-forest mb-12">Calculate Your Carbon Footprint</h2>
+        
+        <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <form id="carbon-calc" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left relative z-10">
+                <div>
+                    <label class="form-label block text-sm font-bold text-gray-700 mb-2">Trip Region</label>
+                    <select id="calc-region" class="form-input w-full border border-gray-200 rounded-xl p-4 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors">
+                        <option value="15">Darjeeling</option>
+                        <option value="18">Sikkim</option>
+                        <option value="12">Assam</option>
+                        <option value="20">Multi-region</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label block text-sm font-bold text-gray-700 mb-2">Duration</label>
+                    <select id="calc-duration" class="form-input w-full border border-gray-200 rounded-xl p-4 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors">
+                        <option value="4">3-5 days</option>
+                        <option value="6">5-7 days</option>
+                        <option value="8">7-9 days</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label block text-sm font-bold text-gray-700 mb-2">Group Size</label>
+                    <input type="number" id="calc-group" min="1" max="20" value="2" class="form-input w-full border border-gray-200 rounded-xl p-4 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors">
+                </div>
+                <div class="md:col-span-3 mt-2">
+                    <button type="submit" class="w-full bg-primary text-white text-lg font-bold py-4 rounded-xl hover:bg-forest transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">Calculate Footprint</button>
+                </div>
+            </form>
+            
+            <div id="calc-results" class="hidden border-t border-gray-100 pt-10 mt-6 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+                    <div class="relative w-48 h-48 flex items-center justify-center flex-shrink-0">
+                        <svg class="calc-gauge w-full h-full transform -rotate-90 drop-shadow-md" viewBox="0 0 100 100">
+                            <circle class="text-gray-100 stroke-current" stroke-width="8" cx="50" cy="50" r="40" fill="transparent"></circle>
+                            <circle class="calc-gauge-ring text-primary stroke-current transition-all duration-1000 ease-out" stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent" stroke-dasharray="251.2" stroke-dashoffset="251.2" style="--gauge-percent: 0;"></circle>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="result-co2" class="text-4xl font-heading font-bold text-forest">0</span>
+                            <span class="text-sm font-bold text-gray-500 uppercase tracking-wide">kg CO₂</span>
+                        </div>
+                    </div>
+                    <div class="text-left bg-green-50 p-6 rounded-2xl border border-green-100">
+                        <h4 class="text-2xl font-bold text-forest mb-3 flex items-center gap-2">We offset this for free! <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm shadow">✓</span></h4>
+                        <p class="text-gray-700 mb-3 text-lg">Your trip requires planting approx <strong id="result-trees" class="text-primary text-xl">0 trees</strong> to become carbon neutral.</p>
+                        <p class="text-sm text-gray-600 font-medium">Included in all our packages at no extra cost to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section

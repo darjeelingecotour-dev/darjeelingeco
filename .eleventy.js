@@ -1,4 +1,4 @@
-import yaml from "js-yaml";
+﻿import yaml from "js-yaml";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
@@ -40,7 +40,7 @@ export default function (eleventyConfig) {
     const full = Math.floor(rating);
     const half = rating % 1 >= 0.5 ? 1 : 0;
     const empty = 5 - full - half;
-    return "★".repeat(full) + (half ? "☆" : "") + "☆".repeat(empty);
+    return "â˜…".repeat(full) + (half ? "â˜†" : "") + "â˜†".repeat(empty);
   });
 
   // Slugify filter
@@ -77,7 +77,7 @@ export default function (eleventyConfig) {
 
   // --- Directory Configuration ---
   return {
-    pathPrefix: "/darjeelingeco/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       includes: "_includes",
@@ -89,3 +89,4 @@ export default function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 }
+

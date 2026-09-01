@@ -1,0 +1,61 @@
+﻿{% if promotion.active %}
+<aside class="promo-banner" aria-label="Current festive travel offer">
+  <div class="container mx-auto px-4 py-5">
+
+    <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+
+      <div class="flex flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
+
+        <div class="promo-discount-badge" aria-hidden="true">
+          <span>UP TO</span>
+          <strong>50%</strong>
+          <span>OFF</span>
+        </div>
+
+        <div>
+          <p class="promo-eyebrow">
+            {{ promotion.eyebrow }}
+          </p>
+
+          <p class="promo-title">
+            {{ promotion.title }}
+          </p>
+
+          <p class="promo-description">
+            {{ promotion.description }}
+          </p>
+        </div>
+
+      </div>
+
+      <div class="promo-actions">
+
+        <a
+          href="/tours/?offer=durga-puja"
+          class="promo-primary"
+        >
+          Explore Festive Offers
+        </a>
+
+        <a
+          href="/contact/?subject=festive-offer#enquiry-form"
+          class="promo-secondary"
+        >
+          Get This Offer
+        </a>
+
+      </div>
+
+    </div>
+
+    <details class="promo-terms">
+      <summary>View offer terms</summary>
+
+      <p>
+        {{ promotion.terms }}
+      </p>
+    </details>
+
+  </div>
+</aside>
+{% endif %}
