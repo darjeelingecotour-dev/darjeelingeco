@@ -1,0 +1,25 @@
+﻿---
+layout: layouts/base.njk
+title: "Darjeeling & Northeast India Travel Gallery | Safar Saathi"
+metaDescription: "Browse travel images from Darjeeling, Sikkim, Assam, Kaziranga and Northeast India tour experiences."
+permalink: /gallery/
+---
+<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Scenes worth travelling for</p><h1>Travel Gallery</h1><p>Explore landscapes, wildlife and memorable routes from our destinations.</p></div></section>
+<section class="section"><div class="container mx-auto px-4"><div class="gallery-grid gallery-grid-large">
+{% set photos = [
+{src:'/assets/images/hero-darjeeling.png',alt:'Himalayan landscape near Darjeeling'},
+{src:'/assets/images/darjeeling-tea.png',alt:'Green tea gardens in Darjeeling'},
+{src:'/assets/images/north-sikkim.png',alt:'Mountain landscape in North Sikkim'},
+{src:'/assets/images/zuluk-road.png',alt:'Winding road through the Zuluk region'},
+{src:'/assets/images/kaziranga-rhino.png',alt:'Wildlife landscape in Kaziranga'},
+{src:'/assets/images/assam-tea.png',alt:'Tea estate scenery in Assam'},
+{src:'/assets/images/pelling-panorama.png',alt:'Panoramic mountain scenery near Pelling'},
+{src:'/assets/images/mountain-trek.png',alt:'Himalayan trekking route'},
+{src:'/assets/images/himalaya-birding.png',alt:'Birding landscape in the Eastern Himalayas'},
+{src:'/assets/images/sikkim-wellness.png',alt:'Peaceful Sikkim wellness setting'},
+{src:'/assets/images/purulia-tribal.png',alt:'Cultural travel scene from Purulia'},
+{src:'/assets/images/eco-lodge.png',alt:'Eco-oriented lodge in a green setting'}] %}
+{% for photo in photos %}<button class="gallery-tile lightbox-trigger" type="button" data-src="{{ photo.src | htmlBaseUrl }}" data-alt="{{ photo.alt }}" aria-label="Open larger image: {{ photo.alt }}"><img src="{{ photo.src | htmlBaseUrl }}" width="800" height="600" alt="{{ photo.alt }}" loading="lazy" decoding="async"></button>{% endfor %}
+</div></div></section>
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Image preview"><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image preview">Ã—</button><img id="lightbox-image" src="" alt=""></div>
+

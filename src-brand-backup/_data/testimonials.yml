@@ -1,0 +1,55 @@
+- name: "Rajesh Kumar"
+  location: "Mumbai, India"
+  trip: "North Sikkim Expedition"
+  quote: "An absolutely magical experience. The frozen beauty of Gurudongmar Lake left us speechless. The Darjeeling tour & travels team handled the permits and logistics flawlessly, so we could just enjoy the raw nature."
+  rating: 5.0
+  avatar: "RK"
+
+- name: "Sarah Jenkins"
+  location: "London, UK"
+  trip: "Assam Tea Circuit"
+  quote: "Staying in a colonial tea bungalow was like stepping back in time. The warmth of the Assamese people and the fascinating tea tasting sessions made this trip truly special. Highly recommended."
+  rating: 4.8
+  avatar: "SJ"
+
+- name: "Ananya Chatterjee"
+  location: "Kolkata, India"
+  trip: "Darjeeling Classic"
+  quote: "I've been to Darjeeling before, but seeing it through the eyes of our local guide was a completely new experience. The heritage walk and the hidden momo joints were the highlights of our family vacation."
+  rating: 4.9
+  avatar: "AC"
+
+- name: "David Miller"
+  location: "Melbourne, Australia"
+  trip: "Eastern Himalaya Birding"
+  quote: "The diversity of birdlife in this region is staggering. Our guide was incredibly knowledgeable and patient. We spotted the elusive Blood Pheasant! A top-tier experience for any serious birder."
+  rating: 5.0
+  avatar: "DM"
+
+- name: "Meera Reddy"
+  location: "Bengaluru, India"
+  trip: "Sikkim Wellness Retreat"
+  quote: "Exactly the reset I needed. The organic food, the morning yoga with views of the Himalayas, and the peace of the monastery changed my entire perspective. I came back a different person."
+  rating: 4.9
+  avatar: "MR"
+
+- name: "Vikram Singh"
+  location: "Delhi, India"
+  trip: "Zuluk Silk Route"
+  quote: "The drive through the 32 hairpin bends was thrilling! We loved the authentic homestays and the incredible hospitality of the locals. It felt like we were exploring an untouched part of the world."
+  rating: 4.7
+  avatar: "VS"
+
+- name: "Emma Larsson"
+  location: "Stockholm, Sweden"
+  trip: "Kaziranga Wildlife Safari"
+  quote: "Seeing the one-horned rhino in the wild was a dream come true. The eco-lodge was fantastic, and it was great to see how much emphasis is put on conservation and community support."
+  rating: 4.8
+  avatar: "EL"
+
+- name: "Karthik Iyer"
+  location: "Chennai, India"
+  trip: "Purulia + Jhargram Tribal"
+  quote: "A beautiful, rustic getaway that perfectly highlights the rich tribal culture of Bengal. The Chhau dance performance under the stars is something I will never forget."
+  rating: 4.6
+  avatar: "KI"

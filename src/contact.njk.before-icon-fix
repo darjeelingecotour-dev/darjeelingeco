@@ -1,0 +1,97 @@
+﻿---
+layout: layouts/base.njk
+title: "Contact Us â€” Safar Saathi"
+permalink: /contact/
+---
+
+<div class="pt-28 pb-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-forest mb-6">Get in Touch</h1>
+            <p class="text-gray-600 text-lg md:text-xl">Have a question or ready to plan your trip? We're here to help craft your perfect Northeast India experience.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            <!-- Left: Form -->
+            <div class="bg-white rounded-3xl shadow-card p-8 md:p-12 border border-gray-100">
+                <h3 class="text-3xl font-heading text-forest mb-8">Send us a message</h3>
+                <form id="enquiry-form" action="https://formsubmit.co/ajax/darjeelingecotour@gmail.com" method="POST" class="space-y-6 inquiry-form" data-whatsapp="{{ site.whatsapp }}" data-home="/darjeelingeco/">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="form-label block text-sm font-bold text-gray-700 mb-2">Your Name *</label>
+                            <input type="text" name="name" required class="form-input w-full border border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-gray-50 focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="form-label block text-sm font-bold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="form-input w-full border border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-gray-50 focus:bg-white transition">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="form-label block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" class="form-input w-full border border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-gray-50 focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="form-label block text-sm font-bold text-gray-700 mb-2">Subject</label>
+                            <select name="subject" class="form-input w-full border border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-gray-50 focus:bg-white transition">
+                                <option>General Inquiry</option>
+                                <option>Book a Tour</option>
+                                <option>Custom Package</option>
+                                <option>Feedback</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="form-label block text-sm font-bold text-gray-700 mb-2">Message *</label>
+                        <textarea name="message" rows="6" required class="form-input w-full border border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none resize-none bg-gray-50 focus:bg-white transition"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full bg-primary hover:bg-forest text-white text-lg font-bold py-4 rounded-xl transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Right: Info -->
+            <div class="space-y-8 flex flex-col">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="tel:{{ site.phone }}" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group">
+                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl group-hover:scale-110 transition-transform">ðŸ“ž</div>
+                        <div>
+                            <h4 class="font-bold text-forest text-lg mb-1">Phone</h4>
+                            <span class="text-gray-600 group-hover:text-primary transition font-medium">{{ site.phone or '+91 98765 43210' }}</span>
+                        </div>
+                    </a>
+                    <a href="mailto:{{ site.email }}" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group">
+                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl group-hover:scale-110 transition-transform">âœ‰ï¸</div>
+                        <div>
+                            <h4 class="font-bold text-forest text-lg mb-1">Email</h4>
+                            <span class="text-gray-600 group-hover:text-primary transition font-medium break-all">{{ site.email or 'hello@Safar Saathi.com' }}</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4 hover:shadow-md transition-shadow group cursor-pointer block">
+                        <div class="bg-green-100 p-4 rounded-full text-green-600 text-2xl group-hover:scale-110 transition-transform">ðŸ’¬</div>
+                        <div>
+                            <h4 class="font-bold text-forest text-lg mb-1">WhatsApp</h4>
+                            <span class="text-gray-600 group-hover:text-green-600 transition font-medium">Message us</span>
+                        </div>
+                    </a>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start gap-4">
+                        <div class="bg-primary/10 p-4 rounded-full text-primary text-2xl">ðŸ“</div>
+                        <div>
+                            <h4 class="font-bold text-forest text-lg mb-1">Office</h4>
+                            <p class="text-gray-600 text-sm font-medium">{{ site.address or 'Kolkata, West Bengal, India' }}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-2 rounded-3xl shadow-card flex-grow min-h-[300px] relative overflow-hidden border border-gray-100 mt-2">
+                    <div id="contact-map" class="w-full h-full rounded-2xl bg-gray-200 z-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

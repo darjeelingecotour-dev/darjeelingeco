@@ -1,8 +1,13 @@
----
+﻿---
+
 layout: layouts/base.njk
-title: "All Tours — Darjeeling tour & travels"
+title: "Festive Tour Packages | Safar Saathi"
 permalink: /tours/
+
 ---
+
+{% include "components/festive-offer-message.njk" %}
+
 
 <div class="pt-16">
     <header class="bg-forest text-white h-64 flex flex-col items-center justify-center relative overflow-hidden">
@@ -42,7 +47,7 @@ permalink: /tours/
             </div>
             
             <div id="no-results" class="hidden text-center py-24">
-                <div class="text-7xl mb-6">🔍</div>
+                <div class="text-7xl mb-6">ðŸ”</div>
                 <h3 class="text-3xl font-heading text-forest mb-3">No tours found</h3>
                 <p class="text-gray-500 mb-8 text-lg">Try adjusting your search or filters.</p>
                 <button id="clear-filters" class="text-primary font-bold hover:underline text-lg">Clear all filters</button>
@@ -50,3 +55,5 @@ permalink: /tours/
         </div>
     </section>
 </div>
+
+
