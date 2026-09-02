@@ -15,10 +15,10 @@ layout: layouts/base.njk
     
     <div class="bg-sage py-4 border-b border-gray-200">
         <div class="container mx-auto px-4 flex flex-wrap gap-6 text-sm md:text-base">
-            <div class="flex items-center gap-2"><span class="font-bold">â±ï¸ Duration:</span> {{ duration }}</div>
-            <div class="flex items-center gap-2"><span class="font-bold">ðŸ’° Price:</span> â‚¹{{ price }}</div>
-            <div class="flex items-center gap-2"><span class="font-bold">â­ Rating:</span> {{ rating }}</div>
-            <div class="flex items-center gap-2"><span class="font-bold">ðŸ“ Region:</span> {{ region }}</div>
+            <div class="flex items-center gap-2"><span class="font-bold">Duration:</span> {{ duration }}</div>
+            <div class="flex items-center gap-2"><span class="font-bold">Starting price:</span> INR {{ price | numberFormat }}</div>
+            <div class="flex items-center gap-2"><span class="font-bold">Rating:</span> {{ rating }} / 5</div>
+            <div class="flex items-center gap-2"><span class="font-bold">Region:</span> {{ region }}</div>
         </div>
     </div>
 
@@ -57,8 +57,8 @@ layout: layouts/base.njk
         <div class="md:col-span-1">
             <div class="bg-white shadow-card p-6 rounded-lg sticky top-24 border border-gray-100">
                 <h3 class="font-heading text-2xl mb-4 text-forest">Book This Tour</h3>
-                <div class="text-3xl text-primary font-bold mb-2">â‚¹{{ price }}</div>
-                <p class="text-gray-600 mb-6 pb-6 border-b border-gray-100">{{ duration }} â€¢ {{ region }}</p>
+                <div class="text-3xl text-primary font-bold mb-2">INR {{ price | numberFormat }}</div>
+                <p class="text-gray-600 mb-6 pb-6 border-b border-gray-100">{{ duration }} &bull; {{ region }}</p>
                 <a href="#inquire" class="btn-primary block text-center bg-primary text-white px-4 py-3 rounded-full hover:bg-forest transition w-full mb-6 font-bold shadow-md">Request Quote</a>
                 <h4 class="font-bold mb-3 text-forest">Includes:</h4>
                 <ul class="list-disc pl-5 mb-6 text-sm text-gray-700 space-y-1">
@@ -77,4 +77,5 @@ layout: layouts/base.njk
         </div>
     </div>
 </article>
+
 

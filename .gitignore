@@ -31,3 +31,13 @@ src-before-encoding-repair/
 
 # Local configuration backups
 *.backup
+
+# Local repair tools and backups
+fix-encoding.mjs
+layout-repair-files.zip
+layout-repair-files/
+src-path-backup/
+ui-fix-backup-*/
+*.path-backup
+*.before-*
+*.safe-backup

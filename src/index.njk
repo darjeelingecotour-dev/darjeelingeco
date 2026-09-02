@@ -36,11 +36,15 @@ metaDescription: "Explore personalized domestic and international holidays, tour
   <div class="container mx-auto px-4">
     <div class="section-heading">
       <p class="eyebrow">Packages for every travel style</p>
-      <h2 id="packages-title">Featured Tour Packages</h2>
+      <h2 id="packages-title">Featured Tour Packages</h2><!-- FEATURED_COUNT={{ collections.featuredTours | length }} --><!-- ALL_COUNT={{ collections.allTours | length }} -->
       <p>Compare durations, regions and starting prices, then enquire for a personalized itinerary.</p>
     </div>
     <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-      {% for tour in tours | slice(0, 6) %}{% include "components/tour-card.njk" %}{% endfor %}
+      {% for tourPage in collections.featuredTours %}
+  {% set tour = tourPage.data %}
+  {% set tourUrl = tourPage.url %}
+  {% include "components/tour-card.njk" %}
+{% endfor %}
     </div>
     <div class="mt-12 text-center"><a href="{{ '/tours/' | url }}" class="btn-primary">Browse All Packages</a></div>
   </div>
@@ -71,5 +75,7 @@ metaDescription: "Explore personalized domestic and international holidays, tour
 </section>
 
 {% include "components/testimonials.njk" %}
+
+
 
 
