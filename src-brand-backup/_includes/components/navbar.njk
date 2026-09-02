@@ -1,0 +1,27 @@
+<header id="navbar" class="site-header fixed inset-x-0 top-0 z-50">
+  <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-2.5" aria-label="Primary navigation">
+    <a href="{{ '/' | htmlBaseUrl }}" class="brand-lockup brand-lockup-header" aria-label="Safar Saathi home">
+      {% include "components/brand-wordmark.njk" %}
+    </a>
+
+    <div class="hidden items-center gap-1 xl:flex">
+      {% for item in site.nav %}
+      <a href="{{ item.url | htmlBaseUrl }}" class="nav-link{% if page.url == item.url %} active{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </div>
+
+    <a href="{{ '/contact/#enquiry-form' | htmlBaseUrl }}" class="btn-primary hidden !px-5 !py-2.5 xl:inline-flex">Enquire Now</a>
+
+    <button id="mobile-menu-toggle" type="button" class="mobile-menu-button xl:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="sr-only">Menu</span>
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu hidden xl:hidden">
+    <div class="container mx-auto flex flex-col gap-1 px-4 py-4">
+      {% for item in site.nav %}<a href="{{ item.url | htmlBaseUrl }}" class="mobile-nav-link">{{ item.title }}</a>{% endfor %}
+      <a href="{{ '/contact/#enquiry-form' | htmlBaseUrl }}" class="btn-primary mt-3">Enquire Now</a>
+    </div>
+  </div>
+</header>

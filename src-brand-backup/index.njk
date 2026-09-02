@@ -1,0 +1,74 @@
+﻿---
+layout: layouts/base.njk
+title: "Domestic & International Tour Packages | Safar Saathi"
+metaDescription: "Explore personalized domestic and international holidays, tour packages, flights, hotels and travel services with Safar Saathi."
+---
+{% include "components/hero.njk" %}
+
+{% include "components/eco-lodge.njk" %}
+
+<section class="section" aria-labelledby="destinations-title">
+  <div class="container mx-auto px-4">
+    <div class="section-heading">
+      <p class="eyebrow">Choose your next escape</p>
+      <h2 id="destinations-title">Popular Destinations</h2>
+      <p>From tea-covered hills to high-altitude valleys and wildlife landscapes, start with the place that inspires you.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {% set places = [
+        { name: 'Darjeeling', image: '/assets/images/darjeeling-tea.png', text: 'Tea gardens, heritage railways and Himalayan views.', link: '/tours/?region=Darjeeling' },
+        { name: 'Sikkim', image: '/assets/images/north-sikkim.png', text: 'Mountain roads, monasteries, lakes and vibrant valleys.', link: '/tours/?region=Sikkim' },
+        { name: 'Assam', image: '/assets/images/kaziranga-rhino.png', text: 'Wildlife, river landscapes, tea estates and living heritage.', link: '/tours/?region=Assam' },
+        { name: 'Bengal Beyond', image: '/assets/images/purulia-tribal.png', text: 'Culture, forests, artisan villages and offbeat trails.', link: '/tours/?region=Bengal' }
+      ] %}
+      {% for place in places %}
+      <a href="{{ place.link | htmlBaseUrl }}" class="destination-card group">
+        <img src="{{ place.image | htmlBaseUrl }}" width="640" height="800" alt="Travel scenery from {{ place.name }}" loading="lazy" decoding="async">
+        <span class="destination-overlay"></span>
+        <span class="destination-copy"><strong>{{ place.name }}</strong><small>{{ place.text }}</small></span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-10 text-center"><a href="{{ '/destinations/' | htmlBaseUrl }}" class="btn-secondary">View All Destinations</a></div>
+  </div>
+</section>
+<section class="section bg-sage" aria-labelledby="packages-title">
+  <div class="container mx-auto px-4">
+    <div class="section-heading">
+      <p class="eyebrow">Packages for every travel style</p>
+      <h2 id="packages-title">Featured Tour Packages</h2>
+      <p>Compare durations, regions and starting prices, then enquire for a personalized itinerary.</p>
+    </div>
+    <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+      {% for tour in tours | slice(0, 6) %}{% include "components/tour-card.njk" %}{% endfor %}
+    </div>
+    <div class="mt-12 text-center"><a href="{{ '/tours/' | htmlBaseUrl }}" class="btn-primary">Browse All Packages</a></div>
+  </div>
+</section>
+
+{% include "components/how-it-works.njk" %}
+
+<section class="section" aria-labelledby="gallery-title">
+  <div class="container mx-auto px-4">
+    <div class="section-heading">
+      <p class="eyebrow">A glimpse of the journey</p>
+      <h2 id="gallery-title">Travel Gallery</h2>
+      <p>Landscapes and experiences that make Northeast India unforgettable.</p>
+    </div>
+    <div class="gallery-grid">
+      {% set gallery = ['/assets/images/hero-darjeeling.png','/assets/images/zuluk-road.png','/assets/images/kaziranga-rhino.png','/assets/images/sikkim-wellness.png','/assets/images/assam-tea.png','/assets/images/mountain-trek.png'] %}
+      {% for photo in gallery %}<a href="{{ '/gallery/' | htmlBaseUrl }}" class="gallery-tile"><img src="{{ photo | htmlBaseUrl }}" width="800" height="600" alt="Northeast India travel gallery image" loading="lazy" decoding="async"></a>{% endfor %}
+    </div>
+    <div class="mt-10 text-center"><a href="{{ '/gallery/' | htmlBaseUrl }}" class="btn-secondary">Open Full Gallery</a></div>
+  </div>
+</section>
+
+<section class="section bg-forest text-white">
+  <div class="container mx-auto grid items-center gap-8 px-4 lg:grid-cols-[1fr_auto]">
+    <div><p class="eyebrow !text-primary-300">Your holiday starts with a conversation</p><h2 class="font-heading text-4xl font-bold md:text-5xl">Not sure which package fits?</h2><p class="mt-4 max-w-2xl text-lg text-white/75">Share your travel dates, group size, interests and approximate budget. We will help you shortlist a suitable route.</p></div>
+    <div class="flex flex-col gap-3 sm:flex-row lg:flex-col"><a href="{{ '/contact/#enquiry-form' | htmlBaseUrl }}" class="btn-primary">Send an Enquiry</a><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" class="btn-outline">Chat on WhatsApp</a></div>
+  </div>
+</section>
+
+{% include "components/testimonials.njk" %}
+

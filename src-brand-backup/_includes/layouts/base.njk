@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b91c1c">
+  <title>{{ title or site.name }}</title>
+  <meta name="description" content="{{ metaDescription or description or site.description }}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | htmlBaseUrl }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ metaDescription or description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | htmlBaseUrl }}">
+  <meta property="og:image" content="{{ site.url }}{{ (image or '/assets/images/hero-darjeeling.png') | htmlBaseUrl }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | htmlBaseUrl }}" type="image/svg+xml">
+  <link rel="alternate icon" href="{{ '/assets/images/favicon.ico' | htmlBaseUrl }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:ital,wght@0,600;0,700;1,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-body text-gray-800 antialiased flex min-h-screen flex-col bg-white">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  {% include "components/navbar.njk" %}
+  <div class="header-spacer" aria-hidden="true"></div>
+  {% include "components/promo-banner.njk" %}
+  <main id="main-content" class="flex-grow">{{ content | safe }}</main>
+  {% include "components/footer.njk" %}
+  <a class="floating-whatsapp" href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}&amp;text=Hello%2C%20I%20would%20like%20help%20planning%20a%20trip." target="_blank" rel="sponsored noopener noreferrer" aria-label="Chat with Safar Saathi on WhatsApp"><span aria-hidden="true">💬</span><span class="hidden sm:inline">Plan My Trip</span></a>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

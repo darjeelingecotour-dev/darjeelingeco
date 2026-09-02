@@ -1,0 +1,21 @@
+﻿{% if promotion.active %}
+<aside class="promo-banner" aria-label="Current festive travel offer">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex flex-col items-center justify-between gap-5 lg:flex-row">
+      <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+        <div class="promo-discount-badge" aria-hidden="true"><span>UP TO</span><strong>50%</strong><span>OFF</span></div>
+        <div>
+          <p class="promo-eyebrow">{{ promotion.eyebrow }}</p>
+          <p class="promo-title">{{ promotion.title }}</p>
+          <p class="promo-description">{{ promotion.description }}</p>
+        </div>
+      </div>
+      <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+        <a href="{{ promotion.ctaUrl | htmlBaseUrl }}" class="promo-primary">{{ promotion.ctaLabel }}</a>
+        <a href="{{ promotion.secondaryUrl | htmlBaseUrl }}" class="promo-secondary">{{ promotion.secondaryLabel }}</a>
+      </div>
+    </div>
+    <details class="promo-terms"><summary>View offer terms</summary><p>{{ promotion.terms }}</p></details>
+  </div>
+</aside>
+{% endif %}
