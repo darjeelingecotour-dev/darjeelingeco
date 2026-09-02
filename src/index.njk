@@ -22,14 +22,14 @@ metaDescription: "Explore personalized domestic and international holidays, tour
         { name: 'Bengal Beyond', image: '/assets/images/purulia-tribal.png', text: 'Culture, forests, artisan villages and offbeat trails.', link: '/tours/?region=Bengal' }
       ] %}
       {% for place in places %}
-      <a href="{{ place.link | htmlBaseUrl }}" class="destination-card group">
-        <img src="{{ place.image | htmlBaseUrl }}" width="640" height="800" alt="Travel scenery from {{ place.name }}" loading="lazy" decoding="async">
+      <a href="{{ place.link | url }}" class="destination-card group">
+        <img src="{{ place.image | url }}" width="640" height="800" alt="Travel scenery from {{ place.name }}" loading="lazy" decoding="async">
         <span class="destination-overlay"></span>
         <span class="destination-copy"><strong>{{ place.name }}</strong><small>{{ place.text }}</small></span>
       </a>
       {% endfor %}
     </div>
-    <div class="mt-10 text-center"><a href="{{ '/destinations/' | htmlBaseUrl }}" class="btn-secondary">View All Destinations</a></div>
+    <div class="mt-10 text-center"><a href="{{ '/destinations/' | url }}" class="btn-secondary">View All Destinations</a></div>
   </div>
 </section>
 <section class="section bg-sage" aria-labelledby="packages-title">
@@ -42,7 +42,7 @@ metaDescription: "Explore personalized domestic and international holidays, tour
     <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
       {% for tour in tours | slice(0, 6) %}{% include "components/tour-card.njk" %}{% endfor %}
     </div>
-    <div class="mt-12 text-center"><a href="{{ '/tours/' | htmlBaseUrl }}" class="btn-primary">Browse All Packages</a></div>
+    <div class="mt-12 text-center"><a href="{{ '/tours/' | url }}" class="btn-primary">Browse All Packages</a></div>
   </div>
 </section>
 
@@ -57,18 +57,19 @@ metaDescription: "Explore personalized domestic and international holidays, tour
     </div>
     <div class="gallery-grid">
       {% set gallery = ['/assets/images/hero-darjeeling.png','/assets/images/zuluk-road.png','/assets/images/kaziranga-rhino.png','/assets/images/sikkim-wellness.png','/assets/images/assam-tea.png','/assets/images/mountain-trek.png'] %}
-      {% for photo in gallery %}<a href="{{ '/gallery/' | htmlBaseUrl }}" class="gallery-tile"><img src="{{ photo | htmlBaseUrl }}" width="800" height="600" alt="Northeast India travel gallery image" loading="lazy" decoding="async"></a>{% endfor %}
+      {% for photo in gallery %}<a href="{{ '/gallery/' | url }}" class="gallery-tile"><img src="{{ photo | url }}" width="800" height="600" alt="Northeast India travel gallery image" loading="lazy" decoding="async"></a>{% endfor %}
     </div>
-    <div class="mt-10 text-center"><a href="{{ '/gallery/' | htmlBaseUrl }}" class="btn-secondary">Open Full Gallery</a></div>
+    <div class="mt-10 text-center"><a href="{{ '/gallery/' | url }}" class="btn-secondary">Open Full Gallery</a></div>
   </div>
 </section>
 
 <section class="section bg-forest text-white">
   <div class="container mx-auto grid items-center gap-8 px-4 lg:grid-cols-[1fr_auto]">
     <div><p class="eyebrow !text-primary-300">Your holiday starts with a conversation</p><h2 class="font-heading text-4xl font-bold md:text-5xl">Not sure which package fits?</h2><p class="mt-4 max-w-2xl text-lg text-white/75">Share your travel dates, group size, interests and approximate budget. We will help you shortlist a suitable route.</p></div>
-    <div class="flex flex-col gap-3 sm:flex-row lg:flex-col"><a href="{{ '/contact/#enquiry-form' | htmlBaseUrl }}" class="btn-primary">Send an Enquiry</a><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" class="btn-outline">Chat on WhatsApp</a></div>
+    <div class="flex flex-col gap-3 sm:flex-row lg:flex-col"><a href="{{ '/contact/#enquiry-form' | url }}" class="btn-primary">Send an Enquiry</a><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" class="btn-outline">Chat on WhatsApp</a></div>
   </div>
 </section>
 
 {% include "components/testimonials.njk" %}
+
 

@@ -19,7 +19,8 @@ permalink: /gallery/
 {src:'/assets/images/sikkim-wellness.png',alt:'Peaceful Sikkim wellness setting'},
 {src:'/assets/images/purulia-tribal.png',alt:'Cultural travel scene from Purulia'},
 {src:'/assets/images/eco-lodge.png',alt:'Eco-oriented lodge in a green setting'}] %}
-{% for photo in photos %}<button class="gallery-tile lightbox-trigger" type="button" data-src="{{ photo.src | htmlBaseUrl }}" data-alt="{{ photo.alt }}" aria-label="Open larger image: {{ photo.alt }}"><img src="{{ photo.src | htmlBaseUrl }}" width="800" height="600" alt="{{ photo.alt }}" loading="lazy" decoding="async"></button>{% endfor %}
+{% for photo in photos %}<button class="gallery-tile lightbox-trigger" type="button" data-src="{{ photo.src | url }}" data-alt="{{ photo.alt }}" aria-label="Open larger image: {{ photo.alt }}"><img src="{{ photo.src | url }}" width="800" height="600" alt="{{ photo.alt }}" loading="lazy" decoding="async"></button>{% endfor %}
 </div></div></section>
 <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Image preview"><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image preview">Ã—</button><img id="lightbox-image" src="" alt=""></div>
+
 
