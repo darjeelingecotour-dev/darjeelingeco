@@ -4,3 +4,25 @@ _site/
 *.log
 .DS_Store
 Thumbs.db
+
+# Generated website
+_site/
+
+# Installed dependencies
+node_modules/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Local backups and repair tools
+offer-fix-backup-*/
+src-brand-backup/
+*.before-icon-fix
+repair-darjeeling-site.ps1
+
+# Windows and editor files
+Thumbs.db
+.DS_Store
+.vscode/
