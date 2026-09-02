@@ -26,3 +26,5 @@ repair-darjeeling-site.ps1
 Thumbs.db
 .DS_Store
 .vscode/
+
+src-before-encoding-repair/
