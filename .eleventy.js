@@ -2,12 +2,7 @@
 
 
 export default function (eleventyConfig) {
-  const isGitHubPages =
-    process.env.GITHUB_ACTIONS === "true";
-
-  const pathPrefix = isGitHubPages
-    ? "/darjeelingeco/"
-    : "/";
+  const pathPrefix = "/";
 
   // Rewrite supported HTML URLs using the active path prefix.
 
@@ -185,3 +180,5 @@ export default function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 }
+
+

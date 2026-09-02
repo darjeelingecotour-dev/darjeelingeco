@@ -28,3 +28,6 @@ Thumbs.db
 .vscode/
 
 src-before-encoding-repair/
+
+# Local configuration backups
+*.backup

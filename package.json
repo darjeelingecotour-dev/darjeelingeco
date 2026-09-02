@@ -4,11 +4,11 @@
     "description":  "SarkarTravels â€” Curated Darjeeling, Sikkim, Assam and Himalayan journeys",
     "type":  "module",
     "scripts":  {
-                    "dev:11ty":  "eleventy --serve --pathprefix=/",
+                    "dev:11ty":  "eleventy --serve",
                     "dev:css":  "tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css --watch",
                     "dev":  "npm run clean \u0026\u0026 npm run build:css \u0026\u0026 npm-run-all -p dev:11ty dev:css",
                     "build:css":  "tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css --minify",
-                    "build:11ty":  "eleventy --pathprefix=/darjeelingeco/",
+                    "build:11ty":  "eleventy",
                     "build":  "npm-run-all build:11ty build:css",
                     "clean":  "rimraf _site"
                 },
@@ -32,3 +32,4 @@
                  ],
     "license":  "MIT"
 }
+
