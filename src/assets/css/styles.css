@@ -1150,3 +1150,33 @@
 .contact-title { display: block; color: #0a2f1f; font-family: Fraunces, Georgia, serif; font-size: 1.55rem; line-height: 1.2; }
 .contact-copy { display: block; max-width: 100%; margin-top: 0.65rem; overflow-wrap: anywhere; color: #4b5563; font-size: 1.05rem; font-weight: 500; line-height: 1.55; }
 @media (max-width: 640px) { .contact-card { min-height: 0; } }
+
+/* Safar Saathi testimonial carousel sizing fix */
+#testimonial-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#testimonial-carousel .carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 600ms ease-in-out;
+  will-change: transform;
+}
+
+#testimonial-carousel .carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#testimonial-carousel .carousel-slide > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}

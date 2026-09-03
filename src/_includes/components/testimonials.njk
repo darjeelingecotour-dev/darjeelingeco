@@ -1,4 +1,4 @@
-<section class="py-24 bg-forest/5 relative overflow-hidden">
+﻿<section class="py-24 bg-forest/5 relative overflow-hidden">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <span class="section-badge text-primary font-medium tracking-wide uppercase text-sm mb-3 block">Reviews</span>
@@ -11,18 +11,18 @@
                     {% for item in testimonials %}
                     <div class="carousel-slide min-w-full flex-shrink-0 px-4 flex flex-col items-center text-center">
                         <div class="text-yellow-400 text-2xl mb-8 flex gap-1">
-                            {% for i in range(0, item.rating) %}⭐{% endfor %}
+                            {% for i in range(0, item.rating) %}<span aria-hidden="true">&#9733;</span>{% endfor %}
                         </div>
                         <p class="text-xl md:text-2xl font-heading italic text-gray-800 mb-10 leading-relaxed max-w-3xl">"{{ item.quote }}"</p>
                         <div class="flex items-center gap-5">
                             {% if item.avatar %}
-                                <img src="{{ item.avatar }}" alt="{{ item.name }}" class="w-16 h-16 rounded-full object-cover shadow-md border-2 border-white">
+                                <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shadow-md border-2 border-white" aria-hidden="true">{{ item.avatar }}</div>
                             {% else %}
                                 <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl shadow-md border-2 border-white">{{ item.name.charAt(0) }}</div>
                             {% endif %}
                             <div class="text-left">
                                 <div class="font-bold text-xl text-forest">{{ item.name }}</div>
-                                <div class="text-sm font-medium text-gray-500">{{ item.location }} • <span class="text-primary">{{ item.trip }}</span></div>
+                                <div class="text-sm font-medium text-gray-500">{{ item.location }} &bull; {{ item.trip }}</div>
                             </div>
                         </div>
                     </div>
@@ -45,3 +45,5 @@
         </div>
     </div>
 </section>
+
+
