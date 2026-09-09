@@ -5,6 +5,9 @@ seoTitle: "North Sikkim Permit Guide 2026 | Documents & Route Rules"
 metaDescription: "Understand North Sikkim permit documents, licensed vehicle requirements, route uncertainty, high-altitude planning and quotation details before booking."
 permalink: /blog/north-sikkim-permit-guide/
 category: "Sikkim Travel Guide"
+primaryKeyword: "north sikkim permit guide"
+secondaryKeywords: ["north sikkim tour package", "north sikkim permit documents", "lachen lachung permit"]
+tags: ["North Sikkim", "Permits", "Lachen", "Lachung", "Gurudongmar"]
 excerpt: "What travellers should prepare before a Lachen, Lachung, Yumthang or Gurudongmar journey, including permits and high-altitude limitations."
 image: /assets/images/north-sikkim.png
 imageAlt: "High-altitude mountain road in North Sikkim"

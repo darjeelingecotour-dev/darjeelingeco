@@ -5,9 +5,12 @@ seoTitle: "Sundarban 2 Nights 3 Days Package Itinerary 2026"
 metaDescription: "Plan a Sundarban 2 nights 3 days trip from Kolkata with road transfer, boat safari, resort stay, watchtower caveats and transparent cost guidance."
 permalink: /blog/sundarban-2-nights-3-days-itinerary/
 category: "Sundarban Travel Guide"
+primaryKeyword: "sundarban 2 nights 3 days package"
+secondaryKeywords: ["sundarban package from kolkata", "sundarban boat safari", "sundarban weekend tour"]
+tags: ["Sundarban", "Kolkata", "Boat Safari", "Wildlife", "2 Nights 3 Days"]
 excerpt: "A practical weekend itinerary with Kolkata transfers, boat safari planning, permit notes and no-hidden-fee guidance."
-image: /assets/images/assam-tea.png
-imageAlt: "River landscape representing a Sundarban boat journey"
+image: /assets/images/sundarban-mangrove-boat.jpg
+imageAlt: "Boat travelling through mangrove waterways in the Sundarbans"
 publishedDate: 2026-09-05
 updatedDate: 2026-09-05
 displayDate: "September 5, 2026"

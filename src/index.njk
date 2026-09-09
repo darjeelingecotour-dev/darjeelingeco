@@ -32,14 +32,14 @@ metaDescription: "Explore personalized domestic and international holidays, tour
     <div class="mt-10 text-center"><a href="{{ '/destinations/' | url }}" class="btn-secondary">View All Destinations</a></div>
   </div>
 </section>
-<section class="section bg-sage" aria-labelledby="packages-title">
+<section class="bg-sage py-12 md:py-16" aria-labelledby="packages-title">
   <div class="container mx-auto px-4">
     <div class="section-heading">
       <p class="eyebrow">Packages for every travel style</p>
       <h2 id="packages-title">Featured Tour Packages</h2>
       <p>Compare durations, regions and starting prices, then enquire for a personalized itinerary.</p>
     </div>
-    <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       {% for tourPage in collections.featuredTours %}
   {% set tour = tourPage.data %}
   {% set tourUrl = tourPage.url %}
@@ -79,7 +79,7 @@ metaDescription: "Explore personalized domestic and international holidays, tour
   <div class="container mx-auto px-4">
     <div class="section-heading"><p class="eyebrow">Travel stories and guides</p><h2 id="latest-blog-title">Latest from Our Travel Blog</h2><p>Use practical itineraries, permit guidance and transparent cost notes to plan with confidence.</p></div>
     <div class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-      {% for post in collections.blogPosts | limit(3) %}{% include "components/blog-card.njk" %}{% endfor %}
+      {% for post in collections.blogPosts | limit(6) %}{% include "components/blog-card.njk" %}{% endfor %}
     </div>
     <div class="mt-10 text-center"><a href="{{ '/blog/' | url }}" class="btn-secondary">View All Travel Guides</a></div>
   </div>

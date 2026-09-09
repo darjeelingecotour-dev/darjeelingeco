@@ -5,6 +5,9 @@ seoTitle: "Darjeeling 4 Nights 5 Days Itinerary | 2026 Guide"
 metaDescription: "Plan a Darjeeling 4 nights 5 days trip with an NJP or Bagdogra pickup, Tiger Hill, Toy Train, tea gardens, realistic travel times and clear cost notes."
 permalink: /blog/darjeeling-4-nights-5-days-itinerary/
 category: "Darjeeling Travel Guide"
+primaryKeyword: "darjeeling 4 nights 5 days itinerary"
+secondaryKeywords: ["darjeeling tour package", "darjeeling itinerary from njp", "darjeeling trip cost from kolkata"]
+tags: ["Darjeeling", "4 Nights 5 Days", "Kolkata", "Toy Train", "Tiger Hill"]
 excerpt: "A practical five-day Darjeeling plan covering arrival, sunrise viewpoints, heritage experiences, tea gardens and departure timing."
 image: /assets/images/darjeeling-tea.png
 imageAlt: "Tea gardens and Himalayan scenery in Darjeeling"

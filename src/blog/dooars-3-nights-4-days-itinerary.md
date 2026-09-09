@@ -4,7 +4,10 @@ title: "Dooars 3 Nights 4 Days Itinerary from NJP or New Mal"
 seoTitle: "Dooars 3 Nights 4 Days Itinerary & Cost Guide 2026"
 metaDescription: "Plan a Dooars 3 nights 4 days trip covering Lataguri, Gorumara region, Jhalong, Bindu, Samsing and Jaldapara with transparent safari-cost notes."
 permalink: /blog/dooars-3-nights-4-days-itinerary/
-category: "Dooars Travel Guide"
+category: "Dooars Travel Guide"
+primaryKeyword: "dooars 3 nights 4 days itinerary"
+secondaryKeywords: ["dooars tour package", "dooars package from kolkata", "gorumara jaldapara tour"]
+tags: ["Dooars", "Gorumara", "Jaldapara", "Wildlife", "3 Nights 4 Days"]
 excerpt: "A balanced four-day wildlife and nature route with station transfers, safari caveats and honest pricing assumptions."
 image: /assets/images/kaziranga-rhino.png
 imageAlt: "Wildlife and forest landscape representing a Dooars nature tour"
