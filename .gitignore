@@ -41,3 +41,13 @@ ui-fix-backup-*/
 *.path-backup
 *.before-*
 *.safe-backup
+
+# Local SEO installers and backups
+safar-saathi-*.ps1
+seo-build-input.txt
+seo-phase1-backup-*/
+seo-phase2-backup-*/
+layout-repair-backup-*/
+kashmir-destination-backup-*/
+*.before-*
+tours.njk.before-*

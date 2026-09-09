@@ -1,20 +1,22 @@
-﻿---
+---
 layout: layouts/base.njk
-title: "Northeast India Destinations | Safar Saathi"
-metaDescription: "Explore Darjeeling, Sikkim, Assam and offbeat Bengal destinations, then find a tour package that matches your interests."
+title: "India Tour Destinations | Safar Saathi"
+seoTitle: "Darjeeling, Sikkim, Dooars, Sundarban & Kashmir Packages"
+metaDescription: "Explore permanent destination guides and tour-package hubs for Darjeeling, North Sikkim, Zuluk, Dooars, Sundarban, Kashmir, Assam and offbeat Bengal."
 permalink: /destinations/
 ---
-<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Explore the Northeast</p><h1>Destinations</h1><p>Discover mountain towns, tea country, wildlife reserves and cultural trails.</p></div></section>
-<section class="section"><div class="container mx-auto px-4"><div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Choose a destination</p><h1>Tour Destinations</h1><p>Compare mountain, wildlife, mangrove, snow and cultural journeys through permanent destination pages.</p></div></section>
+<section class="bg-gray-50 py-12 md:py-16"><div class="container mx-auto px-4"><div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 {% set places = [
-{name:'Darjeeling',image:'/assets/images/darjeeling-tea.png',copy:'Heritage railways, tea gardens, sunrise viewpoints and relaxed hill-town experiences.',query:'Darjeeling'},
-{name:'Sikkim',image:'/assets/images/north-sikkim.png',copy:'Gangtok, Pelling, North Sikkim, monasteries, lakes and dramatic Himalayan roads.',query:'Sikkim'},
-{name:'Assam',image:'/assets/images/assam-tea.png',copy:'Tea-estate stays, river culture, wildlife encounters and historic towns.',query:'Assam'},
-{name:'Kaziranga',image:'/assets/images/kaziranga-rhino.png',copy:'Wildlife-focused journeys with guided safaris and nature experiences.',query:'Assam'},
-{name:'Zuluk & East Sikkim',image:'/assets/images/zuluk-road.png',copy:'Hairpin mountain roads, high valleys and memorable viewpoints.',query:'Sikkim'},
-{name:'Purulia & Jhargram',image:'/assets/images/purulia-tribal.png',copy:'Forests, artisan villages, regional culture and offbeat weekend trails.',query:'Bengal'}] %}
-{% for place in places %}<article class="overflow-hidden rounded-2xl bg-white shadow-card"><img src="{{ place.image | url }}" width="720" height="460" alt="Travel scenery from {{ place.name }}" class="h-64 w-full object-cover" loading="lazy"><div class="p-6"><h2 class="font-heading text-2xl font-bold text-forest">{{ place.name }}</h2><p class="mt-3 text-gray-600">{{ place.copy }}</p><a href="{{ ('/tours/?region=' + place.query) | url }}" class="mt-5 inline-block font-bold text-primary">View packages &rarr;</a></div></article>{% endfor %}
+{name:'Darjeeling',image:'/assets/images/darjeeling-tea.png',copy:'Tea gardens, Tiger Hill, Toy Train experiences and short Himalayan holidays.',link:'/darjeeling-tour-packages/'},
+{name:'North Sikkim',image:'/assets/images/north-sikkim.png',copy:'Lachen, Lachung, Yumthang and condition-dependent high-altitude routes.',link:'/north-sikkim-tour-packages/'},
+{name:'Zuluk and Old Silk Route',image:'/assets/images/zuluk-road.png',copy:'Homestays, hairpin roads, Nathang Valley and permit-dependent East Sikkim circuits.',link:'/zuluk-tour-packages/'},
+{name:'Dooars',image:'/assets/images/kaziranga-rhino.png',copy:'Gorumara, Jaldapara, forests, rivers, tea country and wildlife routes.',link:'/dooars-tour-packages/'},
+{name:'Sundarban',image:'/assets/images/sundarban-mangrove-boat.jpg',copy:'Mangrove waterways, shared or private boats, eco-stays and Kolkata departures.',link:'/sundarban-tour-packages/'},
+{name:'Kashmir',image:'/assets/images/kashmir-dal-lake.jpg',copy:'Srinagar, Gulmarg, Pahalgam, houseboats and transparent winter packages.',link:'/kashmir-tour-packages/'},
+{name:'Assam and Kaziranga',image:'/assets/images/kaziranga-rhino.png',copy:'Wildlife safaris, tea estates, river landscapes and cultural journeys.',link:'/tours/?region=Assam'},
+{name:'Pelling and West Sikkim',image:'/assets/images/pelling-panorama.png',copy:'Monasteries, waterfalls, skywalk views and relaxed mountain stays.',link:'/tours/?region=Pelling'},
+{name:'Purulia and Jhargram',image:'/assets/images/purulia-tribal.png',copy:'Forests, artisan villages, heritage, festivals and offbeat Bengal trails.',link:'/tours/?region=Bengal'}
+] %}
+{% for place in places %}<article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-card"><a href="{{ place.link | url }}" class="block overflow-hidden"><img src="{{ place.image | url }}" width="720" height="460" alt="{{ place.name }} travel packages" class="h-56 w-full object-cover transition duration-500 hover:scale-105" loading="lazy" decoding="async"></a><div class="flex flex-1 flex-col p-6"><h2 class="font-heading text-2xl font-bold text-forest"><a href="{{ place.link | url }}" class="hover:text-primary">{{ place.name }}</a></h2><p class="mt-3 text-gray-600">{{ place.copy }}</p><a href="{{ place.link | url }}" class="mt-auto pt-5 font-bold text-primary">Explore {{ place.name }} packages &rarr;</a></div></article>{% endfor %}
 </div></div></section>
-
-
-

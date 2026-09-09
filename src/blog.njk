@@ -1,23 +1,9 @@
 ---
 layout: layouts/base.njk
 title: "Northeast India Travel Blog | Safar Saathi"
-seoTitle: "Northeast India Travel Blog | Itineraries, Costs & Permits"
-metaDescription: "Read practical Darjeeling, North Sikkim, Zuluk, Dooars and Sundarban travel guides with itineraries, permits, seasonal advice and transparent trip-planning tips."
+seoTitle: "Travel Blog | Darjeeling, Sikkim, Dooars, Sundarban & Kashmir"
+metaDescription: "Read practical itineraries, homestay and cafe guides, permit advice, trekking planning and transparent package-cost guidance for Northeast India and Kashmir."
 permalink: /blog/
 ---
-<section class="page-hero">
-  <div class="container mx-auto px-4">
-    <p class="eyebrow">Travel stories and planning guides</p>
-    <h1>Northeast India Travel Blog</h1>
-    <p>Practical itineraries, transparent cost guidance, permit information and seasonal planning advice for journeys from Kolkata and beyond.</p>
-  </div>
-</section>
-<section class="section bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-      {% for post in collections.blogPosts %}
-        {% include "components/blog-card.njk" %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Travel stories and planning guides</p><h1>Northeast India and Kashmir Travel Blog</h1><p>Practical itineraries, stays, local experiences, permits, seasonal advice and cost questions to ask before booking.</p></div></section>
+<section class="bg-gray-50 py-12 md:py-16"><div class="container mx-auto px-4"><div class="mb-8 flex flex-wrap gap-2" aria-label="Blog topics"><span class="tag-pill">Darjeeling</span><span class="tag-pill">North Sikkim</span><span class="tag-pill">Zuluk</span><span class="tag-pill">Dooars</span><span class="tag-pill">Sundarban</span><span class="tag-pill">Kashmir</span><span class="tag-pill">Homestays</span><span class="tag-pill">Trekking</span></div><div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">{% for post in collections.blogPosts %}{% include "components/blog-card.njk" %}{% endfor %}</div></div></section>

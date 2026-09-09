@@ -18,6 +18,8 @@ nav:
     url: "/destinations/"
   - title: "Packages"
     url: "/tours/"
+  - title: "Offers"
+    url: "/offers/"
   - title: "Blog"
     url: "/blog/"
   - title: "Gallery"
