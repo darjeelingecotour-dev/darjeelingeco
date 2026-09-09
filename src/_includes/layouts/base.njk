@@ -1,16 +1,16 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#b91c1c">
-  <title>{{ title or site.name }}</title>
+  <title>{{ seoTitle or title or site.name }}</title>
   <meta name="description" content="{{ metaDescription or description or site.description }}">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:title" content="{{ seoTitle or title or site.name }}">
   <meta property="og:description" content="{{ metaDescription or description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
   <meta property="og:image" content="{{ site.url }}{{ (image or '/assets/images/hero-darjeeling.png') | url }}">

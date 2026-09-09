@@ -1,4 +1,4 @@
-﻿import yaml from "js-yaml";
+import yaml from "js-yaml";
 
 
 export default function (eleventyConfig) {
@@ -160,6 +160,17 @@ export default function (eleventyConfig) {
     }
   );
 
+
+  // Published blog posts, newest first.
+  eleventyConfig.addCollection(
+    "blogPosts",
+    (collectionApi) => {
+      return collectionApi
+        .getFilteredByGlob("src/blog/*.md")
+        .filter((post) => post.data.draft !== true)
+        .sort((a, b) => new Date(b.data.publishedDate) - new Date(a.data.publishedDate));
+    }
+  );
   return {
     pathPrefix,
 

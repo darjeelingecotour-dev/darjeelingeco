@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: "Northeast India Travel Blog | Safar Saathi"
+seoTitle: "Northeast India Travel Blog | Itineraries, Costs & Permits"
+metaDescription: "Read practical Darjeeling, North Sikkim, Zuluk, Dooars and Sundarban travel guides with itineraries, permits, seasonal advice and transparent trip-planning tips."
+permalink: /blog/
+---
+<section class="page-hero">
+  <div class="container mx-auto px-4">
+    <p class="eyebrow">Travel stories and planning guides</p>
+    <h1>Northeast India Travel Blog</h1>
+    <p>Practical itineraries, transparent cost guidance, permit information and seasonal planning advice for journeys from Kolkata and beyond.</p>
+  </div>
+</section>
+<section class="section bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      {% for post in collections.blogPosts %}
+        {% include "components/blog-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

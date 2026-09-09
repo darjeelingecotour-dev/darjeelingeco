@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: "Sundarban Tour Packages | Safar Saathi"
+seoTitle: "Sundarban Tour Packages from Kolkata | 2N/3D & 3N/4D"
+metaDescription: "Compare Sundarban tour packages from Kolkata with clear boat, resort, meal, permit, guide and group-size assumptions and no undisclosed service fees."
+permalink: /sundarban-tour-packages/
+---
+<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Mangrove waterways and village life</p><h1>Sundarban Tour Packages from Kolkata</h1><p>Fixed-departure and private options with clear boat-sharing, accommodation and forest-cost details.</p></div></section>
+<section class="section"><div class="container mx-auto px-4">
+  <div class="grid gap-7 md:grid-cols-3">
+    {% set plans = [
+      {duration:'2 Nights / 3 Days',title:'Sundarban Weekend Cruise',price:'INR 5,499',basis:'Fixed departure, minimum 10 adults',copy:'Kolkata road transfer, shared boat operation, standard resort, meals and regulated cruise routing.'},
+      {duration:'2 Nights / 3 Days',title:'Sundarban Private Comfort',price:'Request quote',basis:'Private pricing depends on 2, 4 or 6 travellers',copy:'Private road transfer and limited-sharing or private boat options with upgraded accommodation.'},
+      {duration:'3 Nights / 4 Days',title:'Sundarban Extended Explorer',price:'Request quote',basis:'Boat and resort contract required',copy:'A slower route with two structured cruise days and additional village or cultural time.'}
+    ] %}
+    {% for plan in plans %}<article class="rounded-2xl bg-white p-7 shadow-card"><span class="tag-pill">{{ plan.duration }}</span><h2 class="mt-4 font-heading text-2xl font-bold text-forest">{{ plan.title }}</h2><p class="mt-3 text-gray-600">{{ plan.copy }}</p><p class="mt-5 text-sm text-gray-500">Starting price</p><p class="text-2xl font-bold text-primary">{{ plan.price }}</p><p class="mt-2 text-xs text-gray-500">{{ plan.basis }}</p><a href="{{ '/contact/#enquiry-form' | url }}" class="btn-primary mt-6">Request exact quote</a></article>{% endfor %}
+  </div>
+  <div class="mt-12 rounded-2xl border border-primary-100 bg-primary-50 p-8"><h2 class="font-heading text-3xl font-bold text-forest">Wildlife and route transparency</h2><p class="mt-3 text-gray-700">Wildlife sightings cannot be guaranteed. Watchtower and channel access depends on forest permission, tide, weather and operating instructions. The quote will identify Kolkata or Canning pickup, boat sharing, meals, permits, guide fees, taxes and optional upgrades.</p><a href="{{ '/blog/sundarban-2-nights-3-days-itinerary/' | url }}" class="mt-5 inline-block font-bold text-primary">Read the Sundarban 2N/3D guide &rarr;</a></div>
+</div></section>

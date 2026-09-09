@@ -18,6 +18,8 @@ nav:
     url: "/destinations/"
   - title: "Packages"
     url: "/tours/"
+  - title: "Blog"
+    url: "/blog/"
   - title: "Gallery"
     url: "/gallery/"
   - title: "Partner With Us"

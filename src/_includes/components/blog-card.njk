@@ -1,0 +1,16 @@
+<article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
+  <a href="{{ post.url | url }}" class="block overflow-hidden" aria-label="Read {{ post.data.title }}">
+    <img src="{{ post.data.image | url }}" width="720" height="440" alt="{{ post.data.imageAlt or post.data.title }}" class="h-52 w-full object-cover transition duration-500 hover:scale-105" loading="lazy" decoding="async">
+  </a>
+  <div class="flex flex-1 flex-col p-6">
+    <p class="text-xs font-bold uppercase tracking-wider text-primary">{{ post.data.category }}</p>
+    <h2 class="mt-2 font-heading text-2xl font-bold text-forest">
+      <a href="{{ post.url | url }}" class="hover:text-primary">{{ post.data.title }}</a>
+    </h2>
+    <p class="mt-3 line-clamp-3 text-gray-600">{{ post.data.excerpt }}</p>
+    <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-5 text-sm text-gray-500">
+      <time datetime="{{ post.data.publishedDate }}">{{ post.data.displayDate }}</time>
+      <span>{{ post.data.readingTime }} min read</span>
+    </div>
+  </div>
+</article>

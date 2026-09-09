@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+title: "Dooars Tour Packages | Safar Saathi"
+seoTitle: "Dooars Tour Packages from Kolkata & NJP | 2N/3D to 4N/5D"
+metaDescription: "Compare transparent Dooars tour packages for 2 nights 3 days, 3 nights 4 days and 4 nights 5 days with clear pickup, group-size and safari-cost assumptions."
+permalink: /dooars-tour-packages/
+---
+<section class="page-hero"><div class="container mx-auto px-4"><p class="eyebrow">Forests, rivers and tea country</p><h1>Dooars Tour Packages</h1><p>Short, realistic itineraries from New Mal, NJP or Bagdogra with written inclusions and clearly identified safari costs.</p></div></section>
+<section class="section"><div class="container mx-auto px-4">
+  <div class="section-heading"><p class="eyebrow">Transparent starting prices</p><h2>Choose a practical Dooars duration</h2><p>Final price depends on pickup point, minimum paying group, room sharing, season and safari selection.</p></div>
+  <div class="grid gap-7 md:grid-cols-3">
+    {% set plans = [
+      {duration:'2 Nights / 3 Days',title:'Dooars Weekend Escape',price:'INR 4,999',basis:'Minimum 6 adults, ex-New Mal, standard stay',copy:'Lataguri or Murti with Jhalong, Bindu, Samsing and nearby nature points.'},
+      {duration:'3 Nights / 4 Days',title:'Dooars Wildlife Explorer',price:'INR 6,499',basis:'Minimum 6 adults, standard stay',copy:'A balanced Lataguri and Jaldapara route with one selected safari arrangement.'},
+      {duration:'4 Nights / 5 Days',title:'Dooars Grand Wildlife Circuit',price:'INR 8,499',basis:'Minimum 6 adults, standard stay',copy:'Gorumara region, Jaldapara, Chilapata and a wider North Bengal circuit.'}
+    ] %}
+    {% for plan in plans %}<article class="rounded-2xl bg-white p-7 shadow-card"><span class="tag-pill">{{ plan.duration }}</span><h2 class="mt-4 font-heading text-2xl font-bold text-forest">{{ plan.title }}</h2><p class="mt-3 text-gray-600">{{ plan.copy }}</p><p class="mt-5 text-sm text-gray-500">Starting from</p><p class="text-2xl font-bold text-primary">{{ plan.price }} <span class="text-sm font-normal text-gray-500">per person</span></p><p class="mt-2 text-xs text-gray-500">{{ plan.basis }}</p><a href="{{ '/contact/#enquiry-form' | url }}" class="btn-primary mt-6">Request exact quote</a></article>{% endfor %}
+  </div>
+  <div class="mt-12 rounded-2xl border border-primary-100 bg-primary-50 p-8"><h2 class="font-heading text-3xl font-bold text-forest">No-hidden-fee pricing</h2><p class="mt-3 text-gray-700">The written quote will identify accommodation, meals, transfers, sightseeing, safari components, guide charges, taxes, optional activities and payable-at-destination fees. No undisclosed booking or service fee will be added after confirmation.</p><a href="{{ '/blog/dooars-3-nights-4-days-itinerary/' | url }}" class="mt-5 inline-block font-bold text-primary">Read the Dooars 3N/4D guide &rarr;</a></div>
+</div></section>
