@@ -1,0 +1,5 @@
+<div class="fixed inset-x-0 bottom-0 z-50 grid grid-cols-3 border-t border-gray-200 bg-white p-2 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] lg:hidden" aria-label="Quick enquiry actions">
+  <a href="tel:+918240158027" class="flex min-h-[44px] items-center justify-center rounded-lg text-sm font-bold text-forest" data-conversion="phone_click">Call</a>
+  <a href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}&amp;text={{ ('Hello Safar Saathi. I am interested in ' + (title or 'a tour package') + '. Travel dates: __, Adults: __, Children: __, Pickup city: __, Hotel preference: __, Budget: __.') | urlencode }}" target="_blank" rel="noopener noreferrer" class="flex min-h-[44px] items-center justify-center rounded-lg bg-green-600 text-sm font-bold text-white" data-conversion="whatsapp_click">WhatsApp</a>
+  <a href="{{ '/contact/#enquiry-form' | url }}" class="flex min-h-[44px] items-center justify-center rounded-lg bg-primary text-sm font-bold text-white" data-conversion="quote_click">Get Quote</a>
+</div>

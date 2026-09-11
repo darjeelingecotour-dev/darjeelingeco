@@ -176,3 +176,22 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(0);
   startAutoplay();
 });
+
+document.addEventListener("click", function (event) {
+  const actionable = event.target.closest("[data-conversion], [data-package-tier]");
+  if (!actionable) return;
+  const detail = {
+    event: "safar_conversion",
+    action: actionable.dataset.conversion || "package_tier",
+    tier: actionable.dataset.packageTier || "",
+    page: window.location.pathname
+  };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(detail);
+  if (actionable.dataset.packageTier) {
+    const message = document.querySelector('#inquire textarea[name="message"]');
+    if (message && !message.value.includes(actionable.dataset.packageTier)) {
+      message.value = "I would like a " + actionable.dataset.packageTier + " option for this package. ";
+    }
+  }
+});

@@ -26,6 +26,8 @@ nav:
     url: "/gallery/"
   - title: "Partner With Us"
     url: "/#partner-with-us-title"
+  - title: "Services"
+    url: "/custom-itinerary/"
   - title: "Contact Us"
     url: "/contact/"
 

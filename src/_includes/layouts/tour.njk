@@ -28,7 +28,8 @@ layout: layouts/base.njk
       {% if highlight %}<div class="mb-8 rounded-2xl bg-primary-50 p-6"><h2 class="font-heading text-2xl font-bold text-forest">Package highlight</h2><p class="mt-3 text-lg text-gray-700">{{ highlight }}</p></div>{% endif %}
       <div class="tour-content prose max-w-none">{{ content | safe }}</div>
 
-      <section class="mt-10 rounded-2xl border border-primary-100 bg-primary-50 p-7" aria-labelledby="pricing-promise">
+      {% include "components/package-tiers.njk" %}
+<section class="mt-10 rounded-2xl border border-primary-100 bg-primary-50 p-7" aria-labelledby="pricing-promise">
         <h2 id="pricing-promise" class="font-heading text-2xl font-bold text-forest">Transparent Pricing Promise</h2>
         <p class="mt-3 text-gray-700">The confirmed written quotation will identify accommodation, room sharing, meals, transport, sightseeing, permits, taxes, optional activities and payable-at-destination charges. Safar Saathi will not add an undisclosed booking or service fee after written confirmation.</p>
       </section>
