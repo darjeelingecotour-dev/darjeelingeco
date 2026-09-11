@@ -1,8 +1,13 @@
-<section class="mt-10" aria-labelledby="package-options-title">
-  <div class="mb-6"><p class="eyebrow">Customize the service level</p><h2 id="package-options-title" class="font-heading text-3xl font-bold text-forest">Choose Budget, Comfort or Premium</h2><p class="mt-3 text-gray-600">These options describe service levels, not fixed prices. The final written quotation depends on travel date, group size and availability.</p></div>
-  <div class="grid gap-5 md:grid-cols-3">
-    <article class="rounded-2xl border border-gray-200 p-6"><h3 class="font-heading text-2xl font-bold text-forest">Budget</h3><ul class="mt-4 space-y-2 text-sm text-gray-600"><li>Standard stay</li><li>Essential meals</li><li>Shared transport where suitable</li></ul><a href="#inquire" class="mt-5 inline-block font-bold text-primary" data-package-tier="Budget">Get Budget Price</a></article>
-    <article class="rounded-2xl border-2 border-primary bg-primary-50 p-6"><span class="text-xs font-bold uppercase tracking-wider text-primary">Recommended</span><h3 class="mt-2 font-heading text-2xl font-bold text-forest">Comfort</h3><ul class="mt-4 space-y-2 text-sm text-gray-600"><li>Better hotel category</li><li>Breakfast and dinner</li><li>Private vehicle where feasible</li></ul><a href="#inquire" class="mt-5 inline-block font-bold text-primary" data-package-tier="Comfort">Get Comfort Price</a></article>
-    <article class="rounded-2xl border border-gray-200 p-6"><h3 class="font-heading text-2xl font-bold text-forest">Premium</h3><ul class="mt-4 space-y-2 text-sm text-gray-600"><li>Premium stay</li><li>Private transfers</li><li>Selected experiences</li></ul><a href="#inquire" class="mt-5 inline-block font-bold text-primary" data-package-tier="Premium">Get Premium Price</a></article>
+<section class="bg-white py-12 md:py-16" aria-labelledby="package-tier-title">
+  <div class="container mx-auto px-4">
+    <div class="section-heading"><p class="eyebrow">Choose your travel style</p><h2 id="package-tier-title">Budget, Comfort or Premium</h2><p>Compare service levels first, then request the live price for your dates and group.</p></div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {% set tiers = [
+        {name:'Budget',copy:'Practical stays and essential services for price-conscious travellers.',items:['Standard hotel or homestay','Essential meal plan','Shared transport where suitable','Clear optional-cost list']},
+        {name:'Comfort',copy:'Balanced accommodation, meals and transport for most families and couples.',items:['Comfort-category hotel','Breakfast and dinner','Private vehicle where feasible','More itinerary flexibility']},
+        {name:'Premium',copy:'Higher-category stays and private arrangements with added customization.',items:['Premium accommodation','Private transfers','Selected activities','Priority customization']}
+      ] %}
+      {% for tier in tiers %}<article class="flex h-full flex-col rounded-2xl border {% if tier.name == 'Comfort' %}border-primary bg-primary-50{% else %}border-gray-200 bg-white{% endif %} p-7 shadow-card"><p class="text-sm font-bold uppercase tracking-wider text-primary">{{ tier.name }}</p><h3 class="mt-2 font-heading text-2xl font-bold text-forest">{{ tier.name }} Tour Plan</h3><p class="mt-3 text-gray-600">{{ tier.copy }}</p><ul class="mt-5 space-y-3 text-sm text-gray-700">{% for item in tier.items %}<li class="flex gap-2"><span class="text-primary">&#10003;</span><span>{{ item }}</span></li>{% endfor %}</ul><a href="{{ '/contact/#enquiry-form' | url }}" class="btn-secondary mt-auto pt-3">Get Current {{ tier.name }} Price</a></article>{% endfor %}
+    </div>
   </div>
 </section>

@@ -1,56 +1,29 @@
 <footer class="bg-forest text-white">
-  <div class="container mx-auto px-4 py-16">
+  <div class="container mx-auto px-4 py-14">
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <a href="{{ '/' | url }}" class="brand-lockup brand-lockup-footer mb-6" aria-label="Safar Saathi home">
-          {% include "components/brand-wordmark.njk" %}
-        </a>
+        <a href="{{ '/' | url }}" class="brand-lockup brand-lockup-footer mb-6" aria-label="Safar Saathi home">{% include "components/brand-wordmark.njk" %}</a>
         <p class="max-w-sm text-white/70">Personalized domestic and international holidays, thoughtfully planned around you.</p>
         <p class="mt-4 text-sm font-semibold text-primary-300">Bharat Se Duniya Tak</p>
       </div>
-
       <div>
         <h2 class="mb-5 text-base font-bold uppercase tracking-wider">Explore</h2>
-        <ul class="space-y-3 text-white/70">
-          <li><a class="footer-link" href="{{ '/' | url }}">Home</a></li>
-          <li><a class="footer-link" href="{{ '/destinations/' | url }}">Destinations</a></li>
-          <li><a class="footer-link" href="{{ '/tours/' | url }}">Tour Packages</a></li>
-          <li><a class="footer-link" href="{{ '/blog/' | url }}">Travel Blog</a></li>
-          <li><a class="footer-link" href="{{ '/gallery/' | url }}">Travel Gallery</a></li>
-          <li><a class="footer-link" href="{{ '/about/' | url }}">About Safar Saathi</a></li>
-          <li><a class="footer-link" href="{{ '/#partner-with-us-title' | url }}">Partner With Us</a></li>
-        </ul>
+        <ul class="space-y-3 text-white/70"><li><a class="footer-link" href="{{ '/' | url }}">Home</a></li><li><a class="footer-link" href="{{ '/destinations/' | url }}">Destinations</a></li><li><a class="footer-link" href="{{ '/tours/' | url }}">Tour Packages</a></li><li><a class="footer-link" href="{{ '/offers/' | url }}">Seasonal Offers</a></li><li><a class="footer-link" href="{{ '/blog/' | url }}">Travel Blog</a></li><li><a class="footer-link" href="{{ '/about/' | url }}">About Safar Saathi</a></li></ul>
       </div>
-
       <div>
         <h2 class="mb-5 text-base font-bold uppercase tracking-wider">Plan Your Trip</h2>
-        <ul class="space-y-3 text-white/70">
-          <li><a class="footer-link" href="{{ '/contact/#enquiry-form' | url }}">Send an Enquiry</a></li>
-          <li><a class="footer-link" href="{{ '/contact/' | url }}">Contact Us</a></li>
-          <li><a class="footer-link" href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}&amp;text=Hello%2C%20I%20would%20like%20help%20planning%20a%20trip." target="_blank" rel="sponsored noopener noreferrer">Chat on WhatsApp</a></li>
-          <li><a class="footer-link" href="{{ '/privacy/' | url }}">Privacy Policy</a></li>
-          <li><a class="footer-link" href="{{ '/terms/' | url }}">Terms of Service</a></li>
-        </ul>
+        <ul class="space-y-3 text-white/70"><li><a class="footer-link" href="{{ '/custom-itinerary/' | url }}">Custom Itinerary</a></li><li><a class="footer-link" href="{{ '/group-tours/' | url }}">Group Tours</a></li><li><a class="footer-link" href="{{ '/booking-process/' | url }}">Booking Process</a></li><li><a class="footer-link" href="{{ '/payment-and-booking/' | url }}">Payment Information</a></li><li><a class="footer-link" href="{{ '/cancellation-policy/' | url }}">Cancellation Policy</a></li><li><a class="footer-link" href="{{ '/privacy/' | url }}">Privacy Policy</a></li></ul>
       </div>
-
       <div>
         <h2 class="mb-5 text-base font-bold uppercase tracking-wider">Contact</h2>
         <address class="space-y-4 not-italic text-white/70">
-          <p class="flex items-start gap-3"><span aria-hidden="true">📍</span><span>{{ site.address }}</span></p>
-          <p class="flex items-center gap-3"><span aria-hidden="true">📞</span><a class="footer-link" href="tel:+918240158027">{{ site.phone }}</a></p>
-          <p class="flex items-start gap-3"><span aria-hidden="true">✉️</span><a class="footer-link break-all" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          <p><span class="block text-xs font-bold uppercase tracking-wider text-primary-300">Address</span><span>{{ site.address }}</span></p>
+          <p><span class="block text-xs font-bold uppercase tracking-wider text-primary-300">Phone</span><a class="footer-link" href="tel:+918240158027">{{ site.phone }}</a></p>
+          <p><span class="block text-xs font-bold uppercase tracking-wider text-primary-300">Email</span><a class="footer-link break-all" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </address>
-        <div class="mt-7 flex flex-col items-start gap-3">
-          <a href="{{ '/contact/#enquiry-form' | url }}" class="btn-primary">Get a Free Quote</a>
-          <a href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}&amp;text=Hello%2C%20I%20would%20like%20information%20about%20your%20travel%20packages." target="_blank" rel="sponsored noopener noreferrer" class="inline-flex items-center gap-2 font-bold text-primary-300 hover:text-yellow-300"><span aria-hidden="true">💬</span>WhatsApp Us</a>
-        </div>
+        <div class="mt-7 flex flex-wrap gap-3"><a href="{{ '/contact/#enquiry-form' | url }}" class="btn-primary">Get a Free Quote</a><a href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}&amp;text=Hello%20Safar%20Saathi.%20Please%20help%20me%20plan%20a%20trip." target="_blank" rel="noopener noreferrer" class="btn-outline">WhatsApp Us</a></div>
       </div>
     </div>
-
-    <div class="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
-      <p>&copy; 2026 {{ site.name }}. All rights reserved.</p>
-      <p>{{ site.tagline }}</p>
-    </div>
+    <div class="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between"><p>&copy; 2026 {{ site.name }}. All rights reserved.</p><p>{{ site.tagline }}</p></div>
   </div>
 </footer>
-

@@ -1,0 +1,13 @@
+<section class="border-b border-primary-100 bg-primary-50 py-5" aria-label="Booking assurances">
+  <div class="container mx-auto grid grid-cols-2 gap-4 px-4 text-center md:grid-cols-3 lg:grid-cols-6">
+    {% set promises = [
+      ['Written quote','Before payment'],
+      ['Clear pricing','No undisclosed service fee'],
+      ['Hotel options','Category stated in writing'],
+      ['Vehicle basis','Shared or private stated'],
+      ['Cancellation','Terms before confirmation'],
+      ['Trip support','Booking coordination']
+    ] %}
+    {% for promise in promises %}<div class="rounded-xl bg-white p-4 shadow-sm"><strong class="block text-sm text-forest">{{ promise[0] }}</strong><span class="mt-1 block text-xs text-gray-500">{{ promise[1] }}</span></div>{% endfor %}
+  </div>
+</section>

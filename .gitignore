@@ -51,3 +51,14 @@ layout-repair-backup-*/
 kashmir-destination-backup-*/
 *.before-*
 tours.njk.before-*
+
+# Generated site
+
+# Local installers and diagnostics
+business-redesign-input.txt
+business-script-errors.txt
+homepage-hero-diagnostic.txt
+
+# Local backups
+*-backup-*/
+safar-saathi-business-redesign.txt
